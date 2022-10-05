@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: Mulish;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  max-width: 1230px;
+  color: #373f41;
+}
+
+.MuiBox-root {
+  border: none !important;
+}
+
+.MuiTabPanel-root {
+  padding: 0 !important;
+}
+
+.MuiTabs-indicator {
+  display: none !important;
+}
+
+.Mui-selected {
+  background: #3c64b1 !important;
+  color: white !important;
+  border-radius: 12px !important;
+}
+
+.MuiTabs-flexContainer {
+  justify-content: center !important;
+}
+
+.PhoneInputInput {
+  background: #f2f7ff !important;
+  padding: 12px 16px !important;
+  width: 239px !important;
+  border-radius: 6px !important;
+}
+.PhoneInputInput:focus {
+  outline: none !important;
+  border: 1px solid #373f41 !important;
+}
+
+.PhoneInputCountry {
+  background: #f2f7ff !important;
+  border-radius: 6px !important;
+}
+
+.PhoneInputCountrySelectArrow,
+.PhoneInputCountrySelect,
+.PhoneInputCountry {
+  padding: 0 4px !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px !important;
+}
+
+.swiper-slide-sermons {
+  height: 112px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3c64b1 !important;
+}
