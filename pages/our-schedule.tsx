@@ -23,7 +23,7 @@ import Link from "next/link";
 // };
 
 const programRef = collection(database, "Upcoming programs");
-const schedule = () => {
+const Schedule = () => {
   const [programs, setPrograms] = useState<any[]>([]);
 
   useEffect(() => {
@@ -112,4 +112,4 @@ const schedule = () => {
   );
 };
 
-export default schedule;
+export default Schedule;

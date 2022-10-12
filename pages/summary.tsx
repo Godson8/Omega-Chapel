@@ -16,7 +16,7 @@ interface Props {
   amount: number;
 }
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
-const summary = () => {
+const Summary = () => {
   const Router = useRouter();
 
   const {
@@ -123,4 +123,4 @@ const summary = () => {
   );
 };
 
-export default summary;
+export default Summary;

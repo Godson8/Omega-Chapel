@@ -27,7 +27,7 @@ interface FormValues {
   amount: number;
 }
 
-const give = () => {
+const Give = () => {
   const databaseRef = collection(database, "Online Giving");
   const [value, setValue] = useState<any>("");
   const [open, setOpen] = useState(false);
@@ -212,4 +212,4 @@ const give = () => {
   );
 };
 
-export default give;
+export default Give;

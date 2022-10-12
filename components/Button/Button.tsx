@@ -21,4 +21,5 @@ const Button = forwardRef(({ filled, outline, title, href }: Props) => {
   );
 });
 
+Button.displayName = "Button";
 export default Button;
