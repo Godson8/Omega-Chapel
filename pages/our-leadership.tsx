@@ -15,7 +15,12 @@ const leadership = () => {
       />
       <div className="flex flex-col md:flex-row w-full space-y-20 md:space-y-0 md:space-x-20 md:items-center mt-16 md:mt-[100px]">
         <div className="relative w-full h-[505px] rounded-lg overflow-hidden">
-          <Image src="/founders.jpg" layout="fill" className="object-cover" />
+          <Image
+            src="/founders.jpg"
+            layout="fill"
+            className="object-cover"
+            alt="founders"
+          />
         </div>
         <div className="space-y-2">
           <h1 className="text-2xl md:text-[32px] font-bold">

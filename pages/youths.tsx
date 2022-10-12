@@ -70,13 +70,14 @@ const youths = () => {
         // className="mySwiper"
       >
         {images.map((image) => (
-          <SwiperSlide>
+          <SwiperSlide key={image}>
             <div className="flex items-center h-[152px] md:h-72 ">
               <div className="relative h-full w-full object-cover rounded-lg overflow-hidden">
                 <Image
                   src={`/youths/${image}`}
                   layout="fill"
                   objectFit="cover"
+                  alt={image}
                   // className=" rounded-lg"
                   objectPosition="top"
                 />

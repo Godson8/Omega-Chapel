@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { IoCallSharp, IoMail } from "react-icons/io5";
 import ContactShort from "../components/ContactShort/ContactShort";
 import JoinUs from "../components/JoinUs/JoinUs";
 import PageHeader from "../components/PageHeader/PageHeader";

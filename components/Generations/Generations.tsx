@@ -12,6 +12,7 @@ const Generations = () => {
             <Image
               src="/youths/youths.jpg"
               layout="fill"
+              alt="youths"
               className="rounded-xl object-cover object-center "
             />
             <p className="text-white text-[32px] font-bold absolute left-4 bottom-8 z-20">
@@ -25,6 +26,7 @@ const Generations = () => {
             <Image
               src="/kids/kids.jpg"
               layout="fill"
+              alt="kids"
               className="rounded-xl object-cover object-center "
             />
             <p className="text-white text-[32px] font-bold absolute left-4 bottom-8 z-20">

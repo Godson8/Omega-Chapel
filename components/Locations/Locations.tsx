@@ -61,7 +61,11 @@ const Locations = () => {
               <TabPanel value={`${map.id}`} key={map.id}>
                 <div className="flex flex-col items-center space-y-7">
                   <div className="relative w-64 h-[130px] md:w-[572px] md:h-[298px]">
-                    <Image src={`/${map.image}`} layout="fill" />
+                    <Image
+                      src={`/${map.image}`}
+                      layout="fill"
+                      alt={map.image}
+                    />
                   </div>{" "}
                   <Link href={`/locations/${map.link}`} passHref>
                     <Button title={map.countries} outline />

@@ -36,6 +36,7 @@ const music = ({ data }: any) => {
           <Image
             src={latestMusicImage}
             layout="fill"
+            alt={latestMusicTitle}
             className="object-cover rounded-xl"
           />
           <div className="absolute bottom-16 md:left-8 p-4 space-y-3">
@@ -99,6 +100,7 @@ const music = ({ data }: any) => {
                         className="rounded-lg"
                         objectFit="cover"
                         objectPosition="center"
+                        alt={music.snippet.resourceId.videoId}
                       />
                     </div>
                     <div className="w-1/2">

@@ -44,6 +44,7 @@ const PageHeader = ({ title, subTitle1, subTitle2, image }: props) => {
         <Image
           src={`/${image}`}
           layout="fill"
+          alt={image}
           className="object-cover opacity-60 object-right-top"
         />
       </div>

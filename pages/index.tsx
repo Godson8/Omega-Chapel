@@ -36,6 +36,7 @@ const Home = ({ data }: any) => {
             src={latestSermonImage}
             layout="fill"
             className="object-cover rounded-xl"
+            alt={latestSermonTitle}
           />
           <div className="absolute bottom-16 md:left-8 p-4 space-y-3">
             <div className="rounded-[12px] bg-[#D9D9D9] w-fit">

@@ -33,6 +33,7 @@ const sermons = ({ data }: any) => {
           <Image
             src={latestSermonImage}
             layout="fill"
+            alt={latestSermonTitle}
             className="object-cover rounded-xl"
           />
           <div className="absolute bottom-16 md:left-8 p-4 space-y-3">
@@ -96,6 +97,7 @@ const sermons = ({ data }: any) => {
                             : sermons.snippet.thumbnails.default.url
                         }
                         layout="fill"
+                        alt={sermons.snippet.resourceId.videoId}
                         className="rounded-lg"
                         objectFit="cover"
                         objectPosition="center"
