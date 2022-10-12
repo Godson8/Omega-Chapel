@@ -7,17 +7,17 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/navigation";
 
-// import "./styles.css";
-
 import { Grid, Navigation } from "swiper";
 
 import "swiper/css/bundle";
+import Link from "next/link";
 
 const endPoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=18&playlistId=${process.env.PLAYLIST_ID}&key=${process.env.YOUTUBE_KEY}`;
 
 const sermons = ({ data }: any) => {
   console.log(data);
   const latestSermonImage = data.items[0].snippet.thumbnails.maxres.url;
+  const latestSermonVideoId = data.items[0].snippet.resourceId.videoId;
   const latestSermonTitle = data.items[0].snippet.title;
   return (
     <div className="container">
@@ -45,22 +45,25 @@ const sermons = ({ data }: any) => {
               {latestSermonTitle.split("-").shift().trim()}
             </h1>
             <div className="flex xs:space-y-3 xs:flex-col xsOpp:space-x-4">
-              <Button filled title="Watch Sermon" />
+              <Link
+                href={`https://www.youtube.com/watch?v=${latestSermonVideoId}`}
+                passHref
+              >
+                <Button filled title="Watch Sermon" />
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Other Sermons */}
+      {/* Recent Sermons */}
       <div className="mt-8 md:mt-[100px] space-y-4">
         <h1 className="text-[32px] font-bold text-left">Recent Sermons</h1>
 
         <div style={{ height: "244px" }} className="">
           <Swiper
-            // slidesPerView={3}
             breakpoints={{
               // when window width is >= 640px
-              //  slidesPerView: 1,
               640: {
                 slidesPerView: 2,
               },
@@ -80,44 +83,46 @@ const sermons = ({ data }: any) => {
           >
             {data.items.map((sermons: any) => (
               <SwiperSlide key={sermons.id} className="swiper-slide-sermons">
-                <div className="flex items-center h-24 space-x-2 hover:scale-105 transition-transform duration-200 ease-in-out cursor-pointer">
-                  <div className="relative w-1/2 h-full object-cover rounded-lg overflow-hidden shadow-form">
-                    <Image
-                      src={
-                        sermons.snippet.thumbnails.maxres
-                          ? sermons.snippet.thumbnails.maxres.url
-                          : sermons.snippet.thumbnails.default.url
-                      }
-                      layout="fill"
-                      className="rounded-lg"
-                      objectFit="cover"
-                      objectPosition="center"
-                    />
+                <Link
+                  href={`https://www.youtube.com/watch?v=${sermons.snippet.resourceId.videoId}`}
+                  passHref
+                >
+                  <div className="flex items-center h-24 space-x-2 hover:scale-105 transition-transform duration-200 ease-in-out cursor-pointer">
+                    <div className="relative w-1/2 h-full object-cover rounded-lg overflow-hidden shadow-form">
+                      <Image
+                        src={
+                          sermons.snippet.thumbnails.maxres
+                            ? sermons.snippet.thumbnails.maxres.url
+                            : sermons.snippet.thumbnails.default.url
+                        }
+                        layout="fill"
+                        className="rounded-lg"
+                        objectFit="cover"
+                        objectPosition="center"
+                      />
+                    </div>
+                    <div className="w-1/2">
+                      <h1 className="font-bold text-xs md:text-sm text-left ">
+                        {sermons.snippet.title.split("-").shift().trim()}
+                      </h1>
+                      <p className="text-xs md:text-sm text-left ">
+                        {sermons.snippet.title.split("-").pop().trim()}
+                      </p>
+                    </div>
                   </div>
-                  <div className="w-1/2">
-                    <h1 className="font-bold text-xs md:text-sm text-left ">
-                      {sermons.snippet.title.split("-").shift().trim()}
-                    </h1>
-                    <p className="text-xs md:text-sm text-left ">
-                      {sermons.snippet.title.split("-").pop().trim()}
-                    </p>
-                  </div>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
-            {/* <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide> */}
           </Swiper>
         </div>
       </div>
       <div className="w-full flex justify-center mt-20">
-        <Button title="View more Sermons" filled />
+        <Link
+          href="https://www.youtube.com/channel/UC34SSuwfCJdqu3tzBLJ-2YA/videos"
+          passHref
+        >
+          <Button title="View more Sermons" filled />
+        </Link>
       </div>
     </div>
   );

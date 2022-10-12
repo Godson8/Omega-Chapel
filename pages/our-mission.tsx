@@ -1,5 +1,6 @@
 import PageHeader from "../components/PageHeader/PageHeader";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Link from "next/link";
 
 const mission = () => {
   return (
@@ -13,10 +14,12 @@ const mission = () => {
       <div className="mt-16 md:mt-[100px]">
         <div className="flex w-full justify-between">
           <h1 className="text-2xl md:text-[40px] font-black">Our Mission</h1>
-          <div className="flex items-center space-x-2">
-            <p className=" text-[#ee4343] font-extrabold">Our Beliefs</p>
-            <AiOutlineArrowRight color="#ee4343" size={20} />
-          </div>
+          <Link href="/our-beliefs">
+            <div className="flex items-center space-x-2 cursor-pointer">
+              <p className=" text-[#ee4343] font-extrabold">Our Beliefs</p>
+              <AiOutlineArrowRight color="#ee4343" size={20} />
+            </div>
+          </Link>
         </div>
         <p className="mt-10 md:mt-20 text-justify">
           Omega Chapel International Churches is a ministry committed to

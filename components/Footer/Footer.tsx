@@ -34,23 +34,23 @@ const Footer = () => {
           <Link href="/sermons">
             <p className="cursor-pointer">Sermons</p>
           </Link>
-          <Link href="/">
+          <Link href="/music">
             <p className="cursor-pointer">Music</p>
           </Link>
-          <Link href="/">
+          {/* <Link href="/">
             <p className="cursor-pointer">Pictures</p>
-          </Link>
+          </Link> */}
         </div>
         <div className="space-y-5">
           <div className="text-[#eee] flex-col space-y-1">
             <h1 className="font-bold text-base">Locations</h1>
-            <Link href="/">
+            <Link href="/locations/nigeria">
               <p className="cursor-pointer">Nigeria</p>
             </Link>
-            <Link href="/">
+            <Link href="/locations/united-kingdom">
               <p className="cursor-pointer">United Kingdom</p>
             </Link>
-            <Link href="/">
+            <Link href="/locations/canada">
               <p className="cursor-pointer">Canada</p>
             </Link>
           </div>

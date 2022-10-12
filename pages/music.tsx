@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import { Grid, Navigation } from "swiper";
 
 import "swiper/css/bundle";
+import Link from "next/link";
 
 const endPoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=18&playlistId=${process.env.CHOIR_ID}&key=${process.env.YOUTUBE_KEY}`;
 
@@ -81,37 +82,47 @@ const music = ({ data }: any) => {
             className="mySwiper"
           >
             {data.items.map((music: any) => (
-              <SwiperSlide key={music.id}>
-                <div className="flex items-center h-24 space-x-2 hover:scale-105 transition-transform duration-200 ease-in-out cursor-pointer">
-                  <div className="relative w-1/2 h-full object-cover rounded-lg overflow-hidden shadow-form">
-                    <Image
-                      src={
-                        music.snippet.thumbnails.maxres
-                          ? music.snippet.thumbnails.maxres.url
-                          : music.snippet.thumbnails.default.url
-                      }
-                      layout="fill"
-                      className="rounded-lg"
-                      objectFit="cover"
-                      objectPosition="center"
-                    />
+              <SwiperSlide key={music.id} className="swiper-slide-sermons">
+                <Link
+                  href={`https://www.youtube.com/watch?v=${music.snippet.resourceId.videoId}`}
+                  passHref
+                >
+                  <div className="flex items-center h-24 space-x-2 hover:scale-105 transition-transform duration-200 ease-in-out cursor-pointer">
+                    <div className="relative w-1/2 h-full object-cover rounded-lg overflow-hidden shadow-form">
+                      <Image
+                        src={
+                          music.snippet.thumbnails.maxres
+                            ? music.snippet.thumbnails.maxres.url
+                            : music.snippet.thumbnails.default.url
+                        }
+                        layout="fill"
+                        className="rounded-lg"
+                        objectFit="cover"
+                        objectPosition="center"
+                      />
+                    </div>
+                    <div className="w-1/2">
+                      <h1 className="font-bold text-xs md:text-sm text-left ">
+                        {music.snippet.title.split("-").shift().trim()}
+                      </h1>
+                      <p className="text-xs md:text-sm text-left ">
+                        {music.snippet.title.split("-").pop().trim()}
+                      </p>
+                    </div>
                   </div>
-                  <div className="w-1/2">
-                    <h1 className="font-bold text-xs md:text-sm text-left ">
-                      {music.snippet.title.split("-").shift().trim()}
-                    </h1>
-                    <p className="text-xs md:text-sm text-left ">
-                      {music.snippet.title.split("-").pop().trim()}
-                    </p>
-                  </div>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </div>
       <div className="w-full flex justify-center mt-20">
-        <Button title="View more Music" filled />
+        <Link
+          href="https://www.youtube.com/playlist?list=PLiJLD9dPrcur6QNuif1oOBb6VuNwTMmuN"
+          passHref
+        >
+          <Button title="View more Music" filled />
+        </Link>
       </div>
     </div>
   );

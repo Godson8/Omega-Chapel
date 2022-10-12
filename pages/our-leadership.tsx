@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../components/Button/Button";
 import Leaders from "../components/Leaders/Leaders";
 import PageHeader from "../components/PageHeader/PageHeader";
@@ -27,7 +28,9 @@ const leadership = () => {
           </p>
           <h1 className="font-bold">Founders & General Overseers</h1>
           <div className="flex w-full">
-            <Button title="View Sermons" outline />
+            <Link href="/sermons" passHref>
+              <Button title="View Sermons" outline />
+            </Link>
           </div>
         </div>
       </div>
@@ -35,6 +38,7 @@ const leadership = () => {
         <h1 className="text-2xl md:text-[32px] font-bold">Meet our Leaders</h1>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 md:gap-x-14 gap-y-8">
           <Leaders
+            image="pastorSeyi.png"
             name="Oluwaseyi Akinyemi Olumuyiwa"
             position="Senior Pastor Omega Chapel, UK"
           />

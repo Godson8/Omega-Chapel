@@ -169,7 +169,7 @@ const JoinUs = ({ title, detail }: FormTitle) => {
             </div>
           </div>
           <div className="flex flex-col space-y-[6px]">
-            <p>Have you attended Omega Chapel?*</p>
+            <p>Have you ever attended Omega Chapel?*</p>
             <div>
               <select
                 {...register("firstTime", { required: true })}

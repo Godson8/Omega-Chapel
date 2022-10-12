@@ -12,15 +12,15 @@ import Newsletter from "../components/Newsletter/Newsletter";
 import dateFormat from "dateformat";
 import Link from "next/link";
 
-const getServerSideProps = async () => {
-  //    const qw =  await getDocs(programRef);
-  //    const res = await qw.json();
-  //    return {
-  //     props: {
-  //       res,
-  //     },
-  //   };
-};
+// const getServerSideProps = async () => {
+//    const qw =  await getDocs(programRef);
+//    const res = await qw.json();
+//    return {
+//     props: {
+//       res,
+//     },
+//   };
+// };
 
 const programRef = collection(database, "Upcoming programs");
 const schedule = () => {
@@ -37,7 +37,8 @@ const schedule = () => {
           return {
             id: data.id,
             ...data.data(),
-            date: data.data().Date.toDate(),
+            fromDate: data.data().Date[0].toDate(),
+            toDate: data.data().Date[1].toDate(),
           };
         })
       );
@@ -65,11 +66,18 @@ const schedule = () => {
               </div>
             ) : (
               programs.map((program) => (
-                <div className="space-y-2">
+                <div className="space-y-2" key={program.id}>
                   <h1 className="font-bold">{program.Program}</h1>
                   <p>
                     {dateFormat(
-                      program.Date.toDate(),
+                      program.Date[0].toDate(),
+                      "dddd, mmmm dS, yyyy, h:MM:ss TT"
+                    )}
+                  </p>
+                  <p>
+                    to{" "}
+                    {dateFormat(
+                      program.Date[1].toDate(),
                       "dddd, mmmm dS, yyyy, h:MM:ss TT"
                     )}
                   </p>

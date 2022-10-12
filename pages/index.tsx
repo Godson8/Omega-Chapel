@@ -19,6 +19,7 @@ const endPoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=s
 const Home = ({ data }: any) => {
   console.log(data);
   const latestSermonImage = data.items[0].snippet.thumbnails.maxres.url;
+  const latestSermonVideoId = data.items[0].snippet.resourceId.videoId;
   const latestSermonTitle = data.items[0].snippet.title;
   return (
     <div className={styles.container}>
@@ -46,7 +47,12 @@ const Home = ({ data }: any) => {
               {latestSermonTitle.split("-").shift().trim()}
             </h1>
             <div className="flex xs:space-y-3 xs:flex-col xsOpp:space-x-4">
-              <Button filled title="Watch Sermon" />
+              <Link
+                href={`https://www.youtube.com/watch?v=${latestSermonVideoId}`}
+                passHref
+              >
+                <Button filled title="Watch Sermon" />
+              </Link>
               <Link href="/sermons" passHref>
                 <Button outline title="View More Sermons" />
               </Link>

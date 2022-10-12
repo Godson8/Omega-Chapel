@@ -18,16 +18,18 @@ import Link from "next/link";
 import { IoCallSharp, IoMail } from "react-icons/io5";
 const kids = () => {
   const images = [
+    "f.png",
     "a.jpg",
     "b.jpg",
     "c.jpg",
     "kids.jpg",
     "d.jpg",
     "e.jpg",
-    "f.jpg",
     "g.jpg",
     "h.jpg",
     "i.jpg",
+    "j.jpg",
+    "k.jpg",
   ];
   return (
     <div className="container space-y-10 md:space-y-[100px]">

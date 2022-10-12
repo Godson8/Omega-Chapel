@@ -40,6 +40,12 @@ const NavBar = () => {
   const openGenerations = () => {
     setShowGenerations(!showGenerations);
   };
+
+  const navLinkStyles = ({ isActive }: { isActive: any }) => {
+    return {
+      color: isActive && "#649AE9",
+    };
+  };
   return (
     <nav
       className={`${
@@ -171,14 +177,14 @@ const NavBar = () => {
                         </p>
                       </div>
                     </Link>
-                    <Link href="/pictures">
+                    {/* <Link href="/pictures">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm">Pictures</h1>
                         <p className="text-xs">
                           Get to find out who our esteemed leaders are
                         </p>
                       </div>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </li>
@@ -225,7 +231,7 @@ const NavBar = () => {
                 <Link href="/contact">Contact</Link>
               </li>
               <li className="text-secondary font-bold">
-                <Link href="/Give">Give</Link>
+                <Link href="/give">Give</Link>
               </li>
             </ul>
             <div
@@ -260,9 +266,9 @@ const NavBar = () => {
                   <Link href="/music" className="text-sm">
                     <p onClick={handleToggle}>Music</p>
                   </Link>
-                  <Link href="/pictures" className="text-sm">
+                  {/* <Link href="/pictures" className="text-sm">
                     <p onClick={handleToggle}>Pictures</p>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               <div className="py-4 space-y-5">
