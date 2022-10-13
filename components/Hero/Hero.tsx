@@ -21,7 +21,7 @@ const Hero = () => {
     });
   }, []);
   return (
-    <div className="relative w-full h-full overflow-hidden object-cover ">
+    <div className="relative w-full h-screen overflow-hidden object-cover ">
       <video
         // ref={vidRef}
         src="/header.mp4"
@@ -29,11 +29,16 @@ const Hero = () => {
         loop
         muted
         playsInline
-        className="w-full h-screen overflow-hidden object-cover"
+        className="w-full h-screen overflow-hidden object-cover xs:hidden xsOpp:block"
       />
-      {/* <source src="/header.mp4" /> */}
-      {/* </video> */}
-      {/* <Image src="/hero.png" layout="fill" className="object-cover" /> */}
+      <div className="absolute top-0 left-0 xsOpp:hidden xs:block w-full h-screen">
+        <Image
+          src="/header.gif"
+          layout="fill"
+          objectFit="cover"
+          className="object-cover"
+        />
+      </div>
       <div
         className="absolute top-[40%] left-1/2 -translate-x-1/2 px-2"
         ref={backgroundRef}
