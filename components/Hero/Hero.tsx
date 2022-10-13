@@ -7,7 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const backgroundRef = useRef(null);
   const textRef = useRef(null);
+  const vidRef = useRef();
   useEffect(() => {
+    // vidRef.current.play();
     const el = backgroundRef.current;
     gsap.to(el, {
       scrollTrigger: {
@@ -21,13 +23,16 @@ const Hero = () => {
   return (
     <div className="relative w-full h-full overflow-hidden object-cover ">
       <video
+        // ref={vidRef}
+        src="/header.mp4"
         autoPlay
         loop
         muted
+        playsInline
         className="w-full h-screen overflow-hidden object-cover"
-      >
-        <source src="/header.mp4" />
-      </video>
+      />
+      {/* <source src="/header.mp4" /> */}
+      {/* </video> */}
       {/* <Image src="/hero.png" layout="fill" className="object-cover" /> */}
       <div
         className="absolute top-[40%] left-1/2 -translate-x-1/2 px-2"
