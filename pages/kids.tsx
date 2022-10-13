@@ -22,7 +22,7 @@ const kids = () => {
     "a.JPG",
     "b.JPG",
     "c.JPG",
-    "kids.JPG",
+    "kids.jpg",
     "d.JPG",
     "e.JPG",
     "g.JPG",

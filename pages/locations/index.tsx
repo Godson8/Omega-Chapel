@@ -9,7 +9,7 @@ const locations = () => {
         title="Locations"
         subTitle1="Omega"
         subTitle2="Locations"
-        image="locations.jpg"
+        // image="locations.jpg"
       />
 
       <Locations />

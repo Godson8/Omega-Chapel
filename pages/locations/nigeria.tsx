@@ -10,7 +10,7 @@ const nigeria = () => {
         title="Nigeria"
         subTitle1="Locations"
         subTitle2="Nigeria"
-        image="nigeria.jpg"
+        image="nigeria.JPG"
       />
       <div className="mt-16 md:mt-[100px]">
         <div className="w-full justify-between space-y-2">
