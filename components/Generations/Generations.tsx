@@ -6,7 +6,7 @@ const Generations = () => {
     <div className="container mt-16 md:mt-[100px] space-y-8 md:space-y-20">
       <h1 className="text-[32px] font-bold text-center">Generations</h1>
       <div className="flex flex-col md:flex-row items-center md:space-x-[50px] md:space-y-0 space-y-8 ">
-        <Link href="/youths">
+        <Link href="/youths" as={"Youths"}>
           <div className="relative h-[400px] w-full max-w-[590px] rounded-xl overflow-hidden cursor-pointer">
             <div className="w-full h-full top-0 z-10 absolute bg-gradient-to-b from-transparent to-[#2b2b2bb2]"></div>
             <Image
@@ -20,7 +20,7 @@ const Generations = () => {
             </p>
           </div>
         </Link>
-        <Link href="/kids">
+        <Link href="/kids" as={"Kids"}>
           <div className="relative h-[400px] w-full max-w-[590px] rounded-xl overflow-hidden cursor-pointer">
             <div className="w-full h-full top-0 z-10 absolute bg-gradient-to-b from-transparent to-[#2b2b2bb2]"></div>
             <Image
