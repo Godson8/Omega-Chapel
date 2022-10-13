@@ -51,7 +51,7 @@ const Schedule = () => {
         title="Our Schedule"
         subTitle1="About"
         subTitle2="Schedule"
-        image="schedule.jpg"
+        image="schedule.JPG"
       />
       <div className="mt-16 md:mt-[100px] flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-20">
         <div className="bg-[#E6EBF3] md:w-4/5 py-4 px-4 md:px-8 rounded-xl space-y-4">

@@ -10,7 +10,7 @@ const Generations = () => {
           <div className="relative h-[400px] w-full max-w-[590px] rounded-xl overflow-hidden cursor-pointer">
             <div className="w-full h-full top-0 z-10 absolute bg-gradient-to-b from-transparent to-[#2b2b2bb2]"></div>
             <Image
-              src="/youths/youths.jpg"
+              src="/youths/youths.JPG"
               layout="fill"
               alt="youths"
               className="rounded-xl object-cover object-center "
@@ -24,7 +24,7 @@ const Generations = () => {
           <div className="relative h-[400px] w-full max-w-[590px] rounded-xl overflow-hidden cursor-pointer">
             <div className="w-full h-full top-0 z-10 absolute bg-gradient-to-b from-transparent to-[#2b2b2bb2]"></div>
             <Image
-              src="/kids/kids.jpg"
+              src="/kids/kids.JPG"
               layout="fill"
               alt="kids"
               className="rounded-xl object-cover object-center "

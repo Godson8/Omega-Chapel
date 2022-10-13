@@ -19,18 +19,18 @@ import { IoCallSharp, IoMail } from "react-icons/io5";
 import ContactShort from "../components/ContactShort/ContactShort";
 const youths = () => {
   const images = [
-    "a.jpg",
-    "b.jpg",
-    "c.jpg",
+    "a.JPG",
+    "b.JPG",
+    "c.JPG",
     "youths.jpg",
-    "d.jpg",
-    "e.jpg",
-    "f.jpg",
-    "g.jpg",
-    "h.jpg",
-    "i.jpg",
-    "j.jpg",
-    "k.jpg",
+    "d.JPG",
+    "e.JPG",
+    "f.JPG",
+    "g.JPG",
+    "h.JPG",
+    "i.JPG",
+    "j.JPG",
+    "k.JPG",
   ];
   return (
     <div className="container space-y-10 md:space-y-[100px]">

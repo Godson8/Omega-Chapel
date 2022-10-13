@@ -25,7 +25,7 @@ const sermons = ({ data }: any) => {
         title="Sermons"
         subTitle1="Media"
         subTitle2="Sermons"
-        image="sermons.jpg"
+        image="sermons.JPG"
       />
       {/* Latest Sermon */}
       <div className="mt-16 md:mt-[100px] rounded-xl ">

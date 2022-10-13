@@ -27,7 +27,7 @@ const music = ({ data }: any) => {
         title="Music"
         subTitle1="Media"
         subTitle2="Music"
-        image="music.jpg"
+        image="music.JPG"
       />
 
       {/* Latest Sermon */}

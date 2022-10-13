@@ -86,7 +86,7 @@ const Give = () => {
         title="Give"
         subTitle1="Omega"
         subTitle2="Give"
-        image="give.jpg"
+        image="give.JPG"
       />
 
       <div className="mt-16 md:mt-[100px] border border-opacity-30 border-solid border-primary rounded-lg px-4 py-8">

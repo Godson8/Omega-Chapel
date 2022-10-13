@@ -9,7 +9,7 @@ const beliefs = () => {
         title="Our Beliefs"
         subTitle1="About"
         subTitle2="Beliefs"
-        image="beliefs.jpg"
+        image="beliefs.JPG"
       />
       <div className="mt-16 md:mt-[100px]">
         <div className="flex w-full justify-between">
