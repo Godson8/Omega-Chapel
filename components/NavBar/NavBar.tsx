@@ -256,7 +256,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Samuel's company</h1>
+                        <h1 className="text-sm">Samuel’s company</h1>
                         <p className="text-xs">
                           Special fellowship of minister’s kids.
                         </p>
@@ -359,7 +359,7 @@ const NavBar = () => {
                   </Link>
                   <Link href="/">
                     <p onClick={handleToggle} className="text-sm">
-                      Samuel's company
+                      Samuel’s company
                     </p>
                   </Link>
                 </div>
