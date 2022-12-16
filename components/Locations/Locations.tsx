@@ -40,41 +40,43 @@ const Locations = () => {
   ];
 
   return (
-    <div className="container space-y-12 mt-16 md:mt-[100px]">
-      <div className="flex flex-col items-center space-y-4">
-        <h1 className="text-[32px] font-bold">Our Locations</h1>
-        <p className="max-w-md text-center">
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
-          no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-      </div>
-      <div className="flex flex-col items-center">
-        <TabContext value={value}>
-          <div className="space-y-8">
-            <TabList onChange={handleChange} aria-label="Locations">
+    <div className="container  mt-16 md:mt-[100px] ">
+      <div className="bg-[#f5f5f5] space-y-12 py-12 rounded-xl px-2">
+        <div className="flex flex-col items-center space-y-4">
+          <h1 className="text-[32px] font-bold">Our Locations</h1>
+          <p className="max-w-md text-center">
+            Omega Chapel presently has presence in 3 continents: Africa, United
+            Kingdom and North America. We hope to spread more to cover the earth
+            as the waters cover the sea.
+          </p>
+        </div>
+        <div className="flex flex-col items-center">
+          <TabContext value={value}>
+            <div className="space-y-8">
+              <TabList onChange={handleChange} aria-label="Locations">
+                {maps.map((map) => (
+                  <Tab label={map.continent} value={`${map.id}`} key={map.id} />
+                ))}
+              </TabList>
               {maps.map((map) => (
-                <Tab label={map.continent} value={`${map.id}`} key={map.id} />
+                <TabPanel value={`${map.id}`} key={map.id}>
+                  <div className="flex flex-col items-center space-y-7">
+                    <div className="relative w-64 h-[130px] md:w-[572px] md:h-[298px]">
+                      <Image
+                        src={`/${map.image}`}
+                        layout="fill"
+                        alt={map.image}
+                      />
+                    </div>{" "}
+                    <Link href={`/locations/${map.link}`} passHref>
+                      <Button title={map.countries} outline />
+                    </Link>
+                  </div>
+                </TabPanel>
               ))}
-            </TabList>
-            {maps.map((map) => (
-              <TabPanel value={`${map.id}`} key={map.id}>
-                <div className="flex flex-col items-center space-y-7">
-                  <div className="relative w-64 h-[130px] md:w-[572px] md:h-[298px]">
-                    <Image
-                      src={`/${map.image}`}
-                      layout="fill"
-                      alt={map.image}
-                    />
-                  </div>{" "}
-                  <Link href={`/locations/${map.link}`} passHref>
-                    <Button title={map.countries} outline />
-                  </Link>
-                </div>
-              </TabPanel>
-            ))}
-          </div>
-        </TabContext>
+            </div>
+          </TabContext>
+        </div>
       </div>
     </div>
   );

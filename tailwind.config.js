@@ -12,7 +12,7 @@ module.exports = {
         tertiary: "#F4F3EE",
       },
       boxShadow: {
-        nav: "0 1px 3px 0px rgba(55, 60, 59, 0.16)",
+        nav: "0 1px 50px 10px rgba(55, 60, 59, 0.16)",
         form: "0 3px 10px 0px rgba(0, 0, 0, 0.08)",
       },
       fontFamily: {

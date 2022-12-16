@@ -40,9 +40,7 @@ const youths = () => {
           Omega Youths
         </h1>
         <p className="text-center max-w-[445px] flex items-center">
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
-          no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
+          Eagle’s nest: the fellowship of our youngsters.
         </p>
       </div>
       <Swiper

@@ -79,7 +79,7 @@ const NavBar = () => {
                   ${
                     toggle
                       ? " mobile:top-16 mobile:duration-700 mobile:overflow-y-scroll max-h-screen mobile:border-t mobile:border-opacity-30  mobile:border-solid"
-                      : " mobile:-top-[650px]  mobile:duration-500 "
+                      : " mobile:-top-[750px]  mobile:duration-500 "
                   }`}
           >
             {/* <ul className="mobile:bg-white  mobile:h-full mobile:flex mobile:flex-col mobile:items-center mobile:justify-center mobile:p-20 mobile:shadow-nav  md:h-16 md:flex md:items-center md:pt-0 md:z-20 text-sm md:space-x-8 mobile:space-y-[25px]">
@@ -113,7 +113,7 @@ const NavBar = () => {
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm">Our Mission</h1>
                         <p className="text-xs">
-                          Get to find out who our esteemed leaders are
+                          What we are called to do and how we do it.
                         </p>
                       </div>
                     </Link>
@@ -121,7 +121,7 @@ const NavBar = () => {
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm">Our Leadership</h1>
                         <p className="text-xs">
-                          Get to find out who our esteemed leaders are
+                          Get to know our team of leaders
                         </p>
                       </div>
                     </Link>
@@ -129,7 +129,7 @@ const NavBar = () => {
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm">Our Beliefs</h1>
                         <p className="text-xs">
-                          Get to find out who our esteemed leaders are
+                          What we know, believe and hold to be true
                         </p>
                       </div>
                     </Link>
@@ -137,7 +137,7 @@ const NavBar = () => {
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm">Our Schedule</h1>
                         <p className="text-xs">
-                          Get to find out who our esteemed leaders are
+                          Get to follow our events and programmes
                         </p>
                       </div>
                     </Link>
@@ -165,7 +165,7 @@ const NavBar = () => {
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm">Sermons</h1>
                         <p className="text-xs">
-                          Get to find out who our esteemed leaders are
+                          How we preach and teach the Uncompromised word of God
                         </p>
                       </div>
                     </Link>
@@ -173,7 +173,7 @@ const NavBar = () => {
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm">Music</h1>
                         <p className="text-xs">
-                          Get to find out who our esteemed leaders are
+                          Anointed Tunes in worship and praise of God
                         </p>
                       </div>
                     </Link>
@@ -209,15 +209,56 @@ const NavBar = () => {
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm">Youths</h1>
                         <p className="text-xs">
-                          Get to find out who our esteemed leaders are
+                          Eagle’s nest: the fellowship of our youngsters.
                         </p>
                       </div>
                     </Link>
-                    <Link href="/kids">
+                    <Link href="/kiddies">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Kids</h1>
+                        <h1 className="text-sm">Kiddies</h1>
                         <p className="text-xs">
-                          Get to find out who our esteemed leaders are
+                          Our children are Mighty seeds: God’s heritage.
+                        </p>
+                      </div>
+                    </Link>
+                    <Link href="/">
+                      <div className="hover:bg-tertiary p-2 cursor-pointer">
+                        <h1 className="text-sm">Men of David</h1>
+                        <p className="text-xs">
+                          Building pillars that hold the house.
+                        </p>
+                      </div>
+                    </Link>
+                    <Link href="/">
+                      <div className="hover:bg-tertiary p-2 cursor-pointer">
+                        <h1 className="text-sm">Women of honour</h1>
+                        <p className="text-xs">
+                          Support for the unique needs of a woman.
+                        </p>
+                      </div>
+                    </Link>
+                    <Link href="/">
+                      <div className="hover:bg-tertiary p-2 cursor-pointer">
+                        <h1 className="text-sm">Singles</h1>
+                        <p className="text-xs">
+                          Unmarried young adults in search of spouse and
+                          success.
+                        </p>
+                      </div>
+                    </Link>
+                    <Link href="/">
+                      <div className="hover:bg-tertiary p-2 cursor-pointer">
+                        <h1 className="text-sm">Young couples</h1>
+                        <p className="text-xs">
+                          Building a strong marriage and home for the Lord.
+                        </p>
+                      </div>
+                    </Link>
+                    <Link href="/">
+                      <div className="hover:bg-tertiary p-2 cursor-pointer">
+                        <h1 className="text-sm">Samuel's company</h1>
+                        <p className="text-xs">
+                          Special fellowship of minister’s kids.
                         </p>
                       </div>
                     </Link>
@@ -231,7 +272,7 @@ const NavBar = () => {
                 <Link href="/contact">Contact</Link>
               </li>
               <li className="text-secondary font-bold">
-                <Link href="/give">Give</Link>
+                <Link href="/give">Giving</Link>
               </li>
             </ul>
             <div
@@ -242,17 +283,25 @@ const NavBar = () => {
               <div className="py-4 space-y-5">
                 <h1 className="font-bold text-sm">ABOUT</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/our-mission" className="text-sm">
-                    <p onClick={handleToggle}>Our Mission</p>
+                  <Link href="/our-mission">
+                    <p onClick={handleToggle} className="text-sm">
+                      Our Mission
+                    </p>
                   </Link>
-                  <Link href="/our-beliefs" className="text-sm">
-                    <p onClick={handleToggle}>Our Beliefs</p>
+                  <Link href="/our-beliefs">
+                    <p onClick={handleToggle} className="text-sm">
+                      Our Beliefs
+                    </p>
                   </Link>
-                  <Link href="/our-leadership" className="text-sm">
-                    <p onClick={handleToggle}>Our Leadership</p>
+                  <Link href="/our-leadership">
+                    <p onClick={handleToggle} className="text-sm">
+                      Our Leadership
+                    </p>
                   </Link>
-                  <Link href="/our-schedule" className="text-sm">
-                    <p onClick={handleToggle}>Our Schedule</p>
+                  <Link href="/our-schedule">
+                    <p onClick={handleToggle} className="text-sm">
+                      Our Schedule
+                    </p>
                   </Link>
                 </div>
               </div>
@@ -260,13 +309,17 @@ const NavBar = () => {
               <div className="py-4 space-y-5">
                 <h1 className="font-bold text-sm">MEDIA</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/sermons" className="text-sm">
-                    <p onClick={handleToggle}>Sermons</p>
+                  <Link href="/sermons">
+                    <p onClick={handleToggle} className="text-sm">
+                      Sermons
+                    </p>
                   </Link>
-                  <Link href="/music" className="text-sm">
-                    <p onClick={handleToggle}>Music</p>
+                  <Link href="/music">
+                    <p onClick={handleToggle} className="text-sm">
+                      Music
+                    </p>
                   </Link>
-                  {/* <Link href="/pictures" className="text-sm">
+                  {/* <Link href="/pictures" >
                     <p onClick={handleToggle}>Pictures</p>
                   </Link> */}
                 </div>
@@ -274,11 +327,40 @@ const NavBar = () => {
               <div className="py-4 space-y-5">
                 <h1 className="font-bold text-sm">GENERATIONS</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/youths" className="text-sm">
-                    <p onClick={handleToggle}>Youths</p>
+                  <Link href="/youths">
+                    <p onClick={handleToggle} className="text-sm">
+                      Youths
+                    </p>
                   </Link>
-                  <Link href="/kids" className="text-sm">
-                    <p onClick={handleToggle}>Kids</p>
+                  <Link href="/kiddies">
+                    <p onClick={handleToggle} className="text-sm">
+                      Kiddies
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p onClick={handleToggle} className="text-sm">
+                      Men of David
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p onClick={handleToggle} className="text-sm">
+                      Women of honour
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p onClick={handleToggle} className="text-sm">
+                      Singles
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p onClick={handleToggle} className="text-sm">
+                      Young Couples
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p onClick={handleToggle} className="text-sm">
+                      Samuel's company
+                    </p>
                   </Link>
                 </div>
               </div>
@@ -286,8 +368,10 @@ const NavBar = () => {
               <div className="py-4 space-y-5">
                 <h1 className="font-bold text-sm">LOCATIONS</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/locations" className="text-sm">
-                    <p onClick={handleToggle}>Locations</p>
+                  <Link href="/locations">
+                    <p onClick={handleToggle} className="text-sm">
+                      Locations
+                    </p>
                   </Link>
                 </div>
               </div>
@@ -295,17 +379,21 @@ const NavBar = () => {
               <div className="py-4 space-y-5">
                 <h1 className="font-bold text-sm">CONTACT</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/contact" className="text-sm">
-                    <p onClick={handleToggle}>Contact</p>
+                  <Link href="/contact">
+                    <p onClick={handleToggle} className="text-sm">
+                      Contact
+                    </p>
                   </Link>
                 </div>
               </div>
 
               <div className="py-4 space-y-5">
-                <h1 className="font-bold text-sm">GIVE</h1>
+                <h1 className="font-bold text-sm">GIVING</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/give" className="text-sm">
-                    <p onClick={handleToggle}>Give</p>
+                  <Link href="/give">
+                    <p onClick={handleToggle} className="text-sm">
+                      Giving
+                    </p>
                   </Link>
                 </div>
               </div>

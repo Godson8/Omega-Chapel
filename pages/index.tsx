@@ -22,12 +22,13 @@ const Home = ({ data }: any) => {
   const latestSermonVideoId = data.items[0].snippet.resourceId.videoId;
   const latestSermonTitle = data.items[0].snippet.title;
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container}`}>
       <Head>
         <title>Omega Chapel - Welcome Home -</title>
         <meta name="description" content="Omega Chapel - Welcome Home -" />
         <link rel="icon" href="/logo.png" />
       </Head>
+      {/* <Image src="/noise.png" layout="fill" alt="bg" className="object-cover" /> */}
       <Hero />
       {/* Latest Sermon */}
       <div className="container mt-16 md:mt-[100px] rounded-xl ">

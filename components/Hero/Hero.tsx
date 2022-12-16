@@ -46,7 +46,9 @@ const Hero = () => {
         <h1 className="text-[48px] font-black text-white text-center w-96">
           Omega Chapel
         </h1>
-        <p className="font-extrabold text-white text-center">Welcome Home</p>
+        <p className="font-extrabold text-white text-center text-lg">
+          Welcome Home
+        </p>
       </div>
     </div>
   );

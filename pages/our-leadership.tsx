@@ -27,14 +27,15 @@ const leadership = () => {
             Rev’d Pius and Funke Oladipupo
           </h1>
           <p className="text-justify">
-            Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
-            no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
-            molestiae te. Ex duo eripuit mentitum.
+            For over 25 years in ministry, PIUS AND FUNKE OLADIPUPO have shared
+            the biblical message of SALVATION, LIVING OUT CHRIST’S IMAGE AND
+            VICTORY globally from the OMEGA CHAPEL headquarters in Lagos,
+            Nigeria.
           </p>
           <h1 className="font-bold">Founders & General Overseers</h1>
           <div className="flex w-full">
-            <Link href="/sermons" passHref>
-              <Button title="View Sermons" outline />
+            <Link href="/" passHref>
+              <Button title="Learn More" outline />
             </Link>
           </div>
         </div>
@@ -44,10 +45,11 @@ const leadership = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 md:gap-x-14 gap-y-8">
           <Leaders
             image="pastorSeyi.png"
-            name="Oluwaseyi Akinyemi Olumuyiwa"
+            name="Oluwaseyi Olumuyiwa"
             position="Senior Pastor Omega Chapel, UK"
           />
           <Leaders
+            image="pastorKemi.png"
             name="Kemisola Olumuyiwa"
             position="Assistant Pastor Omega Chapel, UK"
           />
@@ -62,6 +64,7 @@ const leadership = () => {
             position="Assistant Pastor Omega Chapel, HQ"
           />
           <Leaders
+            image="avatar.png"
             name="Samson Joel"
             position="Assistant Pastor Omega Chapel, Ilogbo"
           />
@@ -81,6 +84,7 @@ const leadership = () => {
             position="Assistant Pastor Omega Chapel, Ota"
           />
           <Leaders
+            image="pastorYomi.png"
             name="Abayomi Oriretan"
             position="Assistant Pastor Omega Chapel, Canada"
           />
