@@ -60,21 +60,21 @@ const PageHeader = ({ title, subTitle1, subTitle2, image }: props) => {
         </h1>
         <div className="flex space-x-8 justify-center">
           <div className="cursor-pointer">
-            <Link href="/">
+            <Link href="https://www.youtube.com/@omegachapel">
               <div className="flex justify-center items-center h-8 w-8 bg-primary rounded-full">
                 <AiFillYoutube size={15} color="white" />
               </div>
             </Link>
           </div>
           <div className="cursor-pointer">
-            <Link href="/">
+            <Link href="https://www.instagram.com/omega.chapel/">
               <div className="flex justify-center items-center h-8 w-8 bg-primary rounded-full">
                 <FaInstagram size={15} color="white" />
               </div>
             </Link>
           </div>
           <div className="cursor-pointer">
-            <Link href="/">
+            <Link href="https://www.facebook.com/Omega-Chapel-106683021365817">
               <div className="flex justify-center items-center h-8 w-8 bg-primary rounded-full">
                 <FaFacebookF size={15} color="white" />
               </div>
