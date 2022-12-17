@@ -41,7 +41,7 @@ const leadership = () => {
         </div>
       </div>
       <div className="mt-16 md:mt-[100px] space-y-8">
-        <h1 className="text-2xl md:text-[32px] font-bold">Meet our Leaders</h1>
+        <h1 className="text-2xl md:text-[32px] font-bold">Meet our Pastors</h1>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 md:gap-x-14 gap-y-8">
           <Leaders
             image="pastorSeyi.png"
@@ -59,9 +59,9 @@ const leadership = () => {
             position="Assistant Pastor Omega Chapel, HQ"
           />
           <Leaders
-            image="pastorJohnson.png"
-            name="Johnson Ajayi"
-            position="Assistant Pastor Omega Chapel, HQ"
+            image="pastorYomi.png"
+            name="Abayomi Oriretan"
+            position="Assistant Pastor Omega Chapel, Canada"
           />
           <Leaders
             image="avatar.png"
@@ -84,35 +84,46 @@ const leadership = () => {
             position="Assistant Pastor Omega Chapel, Ota"
           />
           <Leaders
-            image="pastorYomi.png"
-            name="Abayomi Oriretan"
+            image="pastorJohnson.png"
+            name="Johnson Ajayi"
+            position="Assistant Pastor Omega Chapel, HQ"
+          />
+          <Leaders
+            image="pastorEbun.png"
+            name="Ebun Oriretan"
             position="Assistant Pastor Omega Chapel, Canada"
           />
-          <Leaders
-            image="oluronbi.png"
-            name="Olumide Oluronbi"
-            position="President Mens Fellowship"
-          />
-          <Leaders
-            image="oyebola.png"
-            name="Desola Oyebola"
-            position="Deaconess, President Womens Fellowship"
-          />
-          <Leaders
-            image="lola.png"
-            name="Lola Ajayi"
-            position="Childrens Coordinator Omega Chapel, HQ"
-          />
-          <Leaders
-            image="bukolaBabalola.png"
-            name="Bukola Babalola"
-            position="Childrens Coordinator Omega Chapel, HQ"
-          />
-          <Leaders
-            image="bukolaAdebanjo.png"
-            name="Bukola Adebanjo"
-            position="Childrens Coordinator Omega Chapel, Ota"
-          />
+        </div>
+
+        <div className="mt-16 md:mt-[100px] space-y-8">
+          <h1 className="text-2xl md:text-[32px] font-bold">Support Leaders</h1>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 md:gap-x-14 gap-y-8">
+            <Leaders
+              image="bukolaBabalola.png"
+              name="Bukola Babalola"
+              position="Childrens Coordinator Omega Chapel, HQ"
+            />
+            <Leaders
+              image="oyebola.png"
+              name="Desola Oyebola"
+              position="Deaconess, President Womens Fellowship"
+            />
+            <Leaders
+              image="oluronbi.png"
+              name="Olumide Oluronbi"
+              position="President Mens Fellowship"
+            />
+            <Leaders
+              image="lola.png"
+              name="Lola Ajayi"
+              position="Childrens Coordinator Omega Chapel, HQ"
+            />
+            <Leaders
+              image="bukolaAdebanjo.png"
+              name="Bukola Adebanjo"
+              position="Childrens Coordinator Omega Chapel, Ota"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -161,7 +161,7 @@ const founders = () => {
       </div>
       <div className="mt-16 md:mt-[100px] flex flex-col items-center space-y-4">
         <h1 className="text-xl font-bold">Connect with us</h1>
-        <p className="w-96 text-center">
+        <p className=" max-w-md text-center">
           Whether you need prayer, Christian teaching materials or Partner
           Service assistance, feel free to contact the office nearest you or you
           may use one of the links online.
