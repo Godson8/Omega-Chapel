@@ -18,7 +18,7 @@ const founders = () => {
         <div className="flex items-center justify-center space-x-6 w-full mt-16 md:mt-[100px]">
           <div className="relative h-[200px] w-[200px] rounded-lg overflow-hidden">
             <Image
-              src="/founders/7.JPG"
+              src="/founders/7.jpg"
               layout="fill"
               className="object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
               alt="founders"
@@ -27,7 +27,7 @@ const founders = () => {
           <div className="space-y-6">
             <div className="relative h-[200px] w-[200px] rounded-lg overflow-hidden">
               <Image
-                src="/founders/8.JPG"
+                src="/founders/8.jpg"
                 layout="fill"
                 className="object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
                 alt="founders"
@@ -35,7 +35,7 @@ const founders = () => {
             </div>
             <div className="relative h-[200px] w-[200px] rounded-lg overflow-hidden">
               <Image
-                src="/founders/6.JPG"
+                src="/founders/6.jpg"
                 layout="fill"
                 className="object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
                 alt="founders"
@@ -44,7 +44,7 @@ const founders = () => {
           </div>
           <div className="relative h-[600px] w-[200px] rounded-lg overflow-hidden">
             <Image
-              src="/founders/4.JPG"
+              src="/founders/4.jpg"
               layout="fill"
               className="object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
               alt="founders"
@@ -53,7 +53,7 @@ const founders = () => {
           <div className="space-y-6">
             <div className="relative h-[200px] w-[200px] rounded-lg overflow-hidden">
               <Image
-                src="/founders/9.JPG"
+                src="/founders/9.jpg"
                 layout="fill"
                 className="object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
                 alt="founders"
@@ -61,7 +61,7 @@ const founders = () => {
             </div>
             <div className="relative h-[200px] w-[200px] rounded-lg overflow-hidden">
               <Image
-                src="/founders/11.JPG"
+                src="/founders/11.jpg"
                 layout="fill"
                 className="object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
                 alt="founders"
@@ -70,7 +70,7 @@ const founders = () => {
           </div>
           <div className="relative h-[200px] w-[200px] rounded-lg overflow-hidden">
             <Image
-              src="/founders/2.JPG"
+              src="/founders/2.jpg"
               layout="fill"
               className="object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
               alt="founders"
