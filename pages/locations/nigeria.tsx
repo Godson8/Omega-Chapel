@@ -15,18 +15,24 @@ const nigeria = () => {
       <div className="mt-16 md:mt-[100px]">
         <div className="w-full justify-between space-y-2">
           <h1 className="text-[32px] font-bold text-center">Our Locations</h1>
-          <div className="bg-[#E6EBF3] p-4 md:p-16 rounded-xl flex flex-col md:flex-row md:items-center md:justify-around space-y-4 md:space-y-0 md:space-x-4">
+          <div className="bg-[#E6EBF3] p-4 md:p-16 rounded-xl grid md:grid-cols-3 md:items-center md:justify-around space-y-4 md:space-y-0 md:space-x-4">
             <div>
               <h1 className="text-2xl font-bold">Lagos</h1>
-              <p className="">3b, Boundary road, Akowonjo, Lagos, Nigeria</p>
+              <p className="">3b, Boundary road, Akowonjo, Lagos.</p>
             </div>
             <div>
               <h1 className="text-2xl font-bold">Ota</h1>
-              <p className="">3b, Boundary road, Akowonjo, Lagos, Nigeria</p>
+              <p className="">
+                Omega Chapel, Dickson Omotayo crescent, behind town hall
+                opposite AUD Ota.
+              </p>
             </div>
             <div>
               <h1 className="text-2xl font-bold">Ilogbo</h1>
-              <p className="">3b, Boundary road, Akowonjo, Lagos, Nigeria</p>
+              <p className="">
+                No 18, asenuga crescent, iyamala bus stop, off Ilogbo road,
+                Ilogbo Ogun State.
+              </p>
             </div>
           </div>
         </div>

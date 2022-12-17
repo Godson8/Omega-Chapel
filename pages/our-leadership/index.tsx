@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../components/Button/Button";
-import Leaders from "../components/Leaders/Leaders";
-import PageHeader from "../components/PageHeader/PageHeader";
+import Button from "../../components/Button/Button";
+import Leaders from "../../components/Leaders/Leaders";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
 const leadership = () => {
   return (
@@ -18,7 +18,7 @@ const leadership = () => {
           <Image
             src="/leaders/founders.JPG"
             layout="fill"
-            className="object-cover"
+            className="object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
             alt="founders"
           />
         </div>
@@ -34,7 +34,7 @@ const leadership = () => {
           </p>
           <h1 className="font-bold">Founders & General Overseers</h1>
           <div className="flex w-full">
-            <Link href="/" passHref>
+            <Link href="/our-leadership/our-founders" passHref>
               <Button title="Learn More" outline />
             </Link>
           </div>

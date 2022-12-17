@@ -97,7 +97,9 @@ const NavBar = () => {
                 onMouseEnter={openAbout}
                 onMouseLeave={() => setShowAbout(false)}
               >
-                <div className="cursor-pointer">About</div>
+                <div className="cursor-pointer hover:text-secondary transition-colors">
+                  About
+                </div>
                 <div
                   className={`${
                     !showAbout && "hidden"
@@ -111,7 +113,7 @@ const NavBar = () => {
                   >
                     <Link href="/our-mission">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Our Mission</h1>
+                        <h1 className="text-sm font-bold">Our Mission</h1>
                         <p className="text-xs">
                           What we are called to do and how we do it.
                         </p>
@@ -119,7 +121,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/our-leadership">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Our Leadership</h1>
+                        <h1 className="text-sm font-bold">Our Leadership</h1>
                         <p className="text-xs">
                           Get to know our team of leaders
                         </p>
@@ -127,7 +129,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/our-beliefs">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Our Beliefs</h1>
+                        <h1 className="text-sm font-bold">Our Beliefs</h1>
                         <p className="text-xs">
                           What we know, believe and hold to be true
                         </p>
@@ -135,7 +137,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/our-schedule">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Our Schedule</h1>
+                        <h1 className="text-sm font-bold">Our Schedule</h1>
                         <p className="text-xs">
                           Get to follow our events and programmes
                         </p>
@@ -149,7 +151,9 @@ const NavBar = () => {
                 onMouseEnter={openMedia}
                 onMouseLeave={() => setShowMedia(false)}
               >
-                <div className="cursor-pointer">Media</div>
+                <div className="cursor-pointer hover:text-secondary transition-colors">
+                  Media
+                </div>
                 <div
                   className={`${
                     !showMedia && "hidden"
@@ -163,7 +167,7 @@ const NavBar = () => {
                   >
                     <Link href="/sermons">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Sermons</h1>
+                        <h1 className="text-sm font-bold">Sermons</h1>
                         <p className="text-xs">
                           How we preach and teach the Uncompromised word of God
                         </p>
@@ -171,7 +175,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/music">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Music</h1>
+                        <h1 className="text-sm font-bold">Music</h1>
                         <p className="text-xs">
                           Anointed Tunes in worship and praise of God
                         </p>
@@ -179,7 +183,7 @@ const NavBar = () => {
                     </Link>
                     {/* <Link href="/pictures">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Pictures</h1>
+                        <h1 className="text-sm font-bold">Pictures</h1>
                         <p className="text-xs">
                           Get to find out who our esteemed leaders are
                         </p>
@@ -193,7 +197,9 @@ const NavBar = () => {
                 onMouseEnter={openGenerations}
                 onMouseLeave={() => setShowGenerations(false)}
               >
-                <div className="cursor-pointer">Generations</div>
+                <div className="cursor-pointer hover:text-secondary transition-colors">
+                  Generations
+                </div>
                 <div
                   className={`${
                     !showGenerations && "hidden"
@@ -207,7 +213,7 @@ const NavBar = () => {
                   >
                     <Link href="/youths">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Youths</h1>
+                        <h1 className="text-sm font-bold">Youths</h1>
                         <p className="text-xs">
                           Eagle’s nest: the fellowship of our youngsters.
                         </p>
@@ -215,7 +221,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/kiddies">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Kiddies</h1>
+                        <h1 className="text-sm font-bold">Kiddies</h1>
                         <p className="text-xs">
                           Our children are Mighty seeds: God’s heritage.
                         </p>
@@ -223,7 +229,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Men of David</h1>
+                        <h1 className="text-sm font-bold">Men of David</h1>
                         <p className="text-xs">
                           Building pillars that hold the house.
                         </p>
@@ -231,7 +237,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Women of honour</h1>
+                        <h1 className="text-sm font-bold">Women of honour</h1>
                         <p className="text-xs">
                           Support for the unique needs of a woman.
                         </p>
@@ -239,7 +245,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Singles</h1>
+                        <h1 className="text-sm font-bold">Singles</h1>
                         <p className="text-xs">
                           Unmarried young adults in search of spouse and
                           success.
@@ -248,7 +254,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Young couples</h1>
+                        <h1 className="text-sm font-bold">Young couples</h1>
                         <p className="text-xs">
                           Building a strong marriage and home for the Lord.
                         </p>
@@ -256,7 +262,7 @@ const NavBar = () => {
                     </Link>
                     <Link href="/">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
-                        <h1 className="text-sm">Samuel’s company</h1>
+                        <h1 className="text-sm font-bold">Samuel’s company</h1>
                         <p className="text-xs">
                           Special fellowship of minister’s kids.
                         </p>
@@ -265,13 +271,13 @@ const NavBar = () => {
                   </div>
                 </div>
               </li>
-              <li>
+              <li className="hover:text-secondary transition-all">
                 <Link href="/locations">Locations</Link>
               </li>
-              <li>
+              <li className="hover:text-secondary transition-all">
                 <Link href="/contact">Contact</Link>
               </li>
-              <li className="text-secondary font-bold">
+              <li className="text-secondary font-bold hover:text-secondary transition-colors">
                 <Link href="/give">Giving</Link>
               </li>
             </ul>

@@ -27,7 +27,7 @@ const generationsList = [
     id: 2,
     title: "Kiddies",
     subTitle: "Our children are Mighty seeds: God’s heritage.",
-    image: "/kids/kids.JPG",
+    image: "/kids/kids.jpg",
     link: "kiddies",
   },
   {

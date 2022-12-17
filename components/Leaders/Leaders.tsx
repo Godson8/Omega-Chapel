@@ -15,6 +15,7 @@ const Leaders = ({ image, name, position }: Props) => {
           layout="fill"
           objectFit="contain"
           alt={image}
+          className="hover:scale-105 transition-transform duration-200 ease-in-out cursor-pointer"
         />
       </div>
       <div>
