@@ -38,7 +38,7 @@ const Schedule = () => {
             id: data.id,
             ...data.data(),
             fromDate: data.data().Date[0].toDate(),
-            toDate: data.data().Date[1].toDate(),
+            // toDate: data.data().Date[1] ? data.data().Date[1].toDate() : "",
           };
         })
       );
@@ -74,13 +74,13 @@ const Schedule = () => {
                       "dddd, mmmm dS, yyyy, h:MM:ss TT"
                     )}
                   </p>
-                  <p>
+                  {/* <p>
                     to{" "}
                     {dateFormat(
                       program.Date[1].toDate(),
                       "dddd, mmmm dS, yyyy, h:MM:ss TT"
                     )}
-                  </p>
+                  </p> */}
                   {/* <p>{program.Date.toDate()}</p> */}
                 </div>
               ))
