@@ -34,14 +34,14 @@ const generationsList = [
     id: 3,
     title: "Men of David",
     subTitle: "Building pillars that hold the house.",
-    image: "/men/men.jpg",
+    image: "/men/men.JPG",
     link: "",
   },
   {
     id: 4,
     title: "Women of honour",
     subTitle: "Support for the unique needs of a woman.",
-    image: "/women/women.jpg",
+    image: "/women/women.JPG",
     link: "",
   },
   {
