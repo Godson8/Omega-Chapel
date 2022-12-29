@@ -13,12 +13,12 @@ const leadership = () => {
         subTitle2="Leadership"
         // image="leadership.jpg"
       />
-      <div className="flex flex-col md:flex-row w-full space-y-20 md:space-y-0 md:space-x-20 md:items-center mt-16 md:mt-[100px]">
-        <div className="relative w-full h-[505px] rounded-lg overflow-hidden">
+      <div className="flex flex-col md:flex-row w-full space-y-12 md:space-y-0 md:space-x-20 md:items-center mt-16 md:mt-[100px]">
+        <div className="relative w-full h-[360px] md:h-[505px] rounded-lg overflow-hidden bg-[#ffecec]">
           <Image
-            src="/leaders/founders.JPG"
+            src="/leaders/daddy&Mummy.png"
             layout="fill"
-            className="object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
+            className="object-cover object-top hover:scale-105 transition-transform duration-200 ease-in-out"
             alt="founders"
           />
         </div>
@@ -64,7 +64,7 @@ const leadership = () => {
             position="Assistant Pastor Omega Chapel, Canada"
           />
           <Leaders
-            image="avatar.png"
+            image="pastorJoel.png"
             name="Samson Joel"
             position="Assistant Pastor Omega Chapel, Ilogbo"
           />
@@ -86,7 +86,7 @@ const leadership = () => {
           <Leaders
             image="pastorJohnson.png"
             name="Johnson Ajayi"
-            position="Assistant Pastor Omega Chapel, HQ"
+            position="Assistant Pastor, Choir Leader, Omega Chapel, HQ"
           />
           <Leaders
             image="pastorEbun.png"
@@ -122,6 +122,11 @@ const leadership = () => {
               image="bukolaAdebanjo.png"
               name="Bukola Adebanjo"
               position="Childrens Coordinator Omega Chapel, Ota"
+            />
+            <Leaders
+              image="adebowaleJoel.png"
+              name="Adebowale Joel"
+              position="Choir leader Omega Chapel, Ilogbo"
             />
           </div>
         </div>

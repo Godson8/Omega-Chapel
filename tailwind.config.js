@@ -22,6 +22,7 @@ module.exports = {
         mobile: { max: "767px" },
         xs: { max: "390px" },
         xsOpp: { min: "391px" },
+        lgOpp: { max: "1080px" },
       },
     },
   },

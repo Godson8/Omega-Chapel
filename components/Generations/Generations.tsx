@@ -34,14 +34,14 @@ const generationsList = [
     id: 3,
     title: "Men of David",
     subTitle: "Building pillars that hold the house.",
-    image: "",
+    image: "/men/men.jpg",
     link: "",
   },
   {
     id: 4,
     title: "Women of honour",
     subTitle: "Support for the unique needs of a woman.",
-    image: "",
+    image: "/women/women.jpg",
     link: "",
   },
   {
@@ -118,7 +118,7 @@ const Generations = () => {
                         {generation.subTitle}
                       </p>
                     </div>
-                    {generation.image && (
+                    {generation.id < 3 && (
                       <Link
                         href={generation.link}
                         as={generation.title}

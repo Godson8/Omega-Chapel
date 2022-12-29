@@ -19,7 +19,7 @@ const endPoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=s
 const music = ({ data }: any) => {
   console.log(data);
   const latestMusicImage =
-    data.items[data.items.length - 1].snippet.thumbnails.default.url;
+    data.items[data.items.length - 1].snippet.thumbnails.high.url;
   const latestMusicTitle = data.items[data.items.length - 1].snippet.title;
   return (
     <div className="container">

@@ -227,7 +227,7 @@ const NavBar = () => {
                         </p>
                       </div>
                     </Link>
-                    <Link href="/">
+                    <Link href="">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm font-bold">Men of David</h1>
                         <p className="text-xs">
@@ -235,7 +235,7 @@ const NavBar = () => {
                         </p>
                       </div>
                     </Link>
-                    <Link href="/">
+                    <Link href="">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm font-bold">Women of honour</h1>
                         <p className="text-xs">
@@ -243,7 +243,7 @@ const NavBar = () => {
                         </p>
                       </div>
                     </Link>
-                    <Link href="/">
+                    <Link href="">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm font-bold">Singles</h1>
                         <p className="text-xs">
@@ -252,7 +252,7 @@ const NavBar = () => {
                         </p>
                       </div>
                     </Link>
-                    <Link href="/">
+                    <Link href="">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm font-bold">Young couples</h1>
                         <p className="text-xs">
@@ -260,7 +260,7 @@ const NavBar = () => {
                         </p>
                       </div>
                     </Link>
-                    <Link href="/">
+                    <Link href="">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm font-bold">Samuel’s company</h1>
                         <p className="text-xs">
@@ -278,7 +278,7 @@ const NavBar = () => {
                 <Link href="/contact">Contact</Link>
               </li>
               <li className="text-secondary font-bold hover:text-secondary transition-colors">
-                <Link href="/give">Giving</Link>
+                <Link href="/giving">Giving</Link>
               </li>
             </ul>
             <div
@@ -343,7 +343,7 @@ const NavBar = () => {
                       Kiddies
                     </p>
                   </Link>
-                  <Link href="/">
+                  <Link href="">
                     <p onClick={handleToggle} className="text-sm">
                       Men of David
                     </p>
@@ -353,17 +353,17 @@ const NavBar = () => {
                       Women of honour
                     </p>
                   </Link>
-                  <Link href="/">
+                  <Link href="">
                     <p onClick={handleToggle} className="text-sm">
                       Singles
                     </p>
                   </Link>
-                  <Link href="/">
+                  <Link href="">
                     <p onClick={handleToggle} className="text-sm">
                       Young Couples
                     </p>
                   </Link>
-                  <Link href="/">
+                  <Link href="">
                     <p onClick={handleToggle} className="text-sm">
                       Samuel’s company
                     </p>
@@ -396,7 +396,7 @@ const NavBar = () => {
               <div className="py-4 space-y-5">
                 <h1 className="font-bold text-sm">GIVING</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/give">
+                  <Link href="/giving">
                     <p onClick={handleToggle} className="text-sm">
                       Giving
                     </p>
