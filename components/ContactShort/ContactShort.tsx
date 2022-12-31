@@ -7,13 +7,13 @@ const ContactShort = () => {
       <Link href="/">
         <div className="flex space-x-2 items-center cursor-pointer">
           <IoCallSharp size={25} color="#3C64B1" />
-          <p className="text-2xl font-extralight">+2347015556339</p>
+          <p className="text-2xl font-extralight">+234 703 842 3282</p>
         </div>
       </Link>
       <Link href="/">
         <div className="flex space-x-2 items-center cursor-pointer">
           <IoMail size={25} color="#3C64B1" />
-          <p className="text-2xl font-extralight">hello@omegachapel.com</p>
+          <p className="text-2xl font-extralight">hello@omegachapel.org</p>
         </div>
       </Link>
     </div>
