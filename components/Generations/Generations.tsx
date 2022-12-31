@@ -47,7 +47,7 @@ const generationsList = [
   {
     id: 5,
     title: "Singles",
-    subTitle: "Unmarried young adults in search of spouse and success.",
+    subTitle: "Unmarried young adults.",
     image: "/singles.JPG",
     link: "",
   },
@@ -100,7 +100,7 @@ const Generations = () => {
           >
             {generationsList.map((generation) => (
               <SwiperSlide key={generation.title}>
-                <div className=" h-[357px] w-full max-w-[286px] rounded-xl overflow-hidden bg-white shadow-form">
+                <div className=" h-[357px] w-full md:max-w-[286px] rounded-xl overflow-hidden bg-white shadow-form">
                   <div className="w-full h-1/2 rounded-t-xl relative overflow-hidden">
                     <Image
                       src={generation.image ? generation.image : "/avatar.jpg"}

@@ -69,7 +69,11 @@ const FirstTimers = () => {
   const getDays = (days: number) => {
     let day = [];
     for (let i = 1; i <= days; i++) {
-      day.push(<option value={i} label={`${i}`} />);
+      day.push(
+        <option value={i} label={`${i}`}>
+          {i}
+        </option>
+      );
     }
     return day;
   };
@@ -157,7 +161,7 @@ const FirstTimers = () => {
       <div className="mt-16 md:mt-[100px] flex flex-col items-center ">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-4 w-auto"
+          className="flex flex-col space-y-4 "
         >
           <h1 className="text-2xl font-bold text-center mb-8">
             First Timers Welcome Card
@@ -168,7 +172,7 @@ const FirstTimers = () => {
               {...register("firstName", { required: true })}
               autoComplete="nope"
               name="firstName"
-              className="px-4 py-3 bg-[#F2F7FF] w-full md:w-[300px] text-primary focus:border focus:outline-none focus:border-primary rounded-md"
+              className="px-4 py-3 bg-[#F2F7FF] text-primary focus:border focus:outline-none focus:border-primary rounded-md"
               type="text"
               placeholder="First Name"
             />
@@ -176,7 +180,7 @@ const FirstTimers = () => {
               {...register("lastName", { required: true })}
               autoComplete="nope"
               name="lastName"
-              className="px-4 py-3 bg-[#F2F7FF] w-full md:w-[300px] text-primary focus:border focus:outline-none focus:border-primary rounded-md"
+              className="px-4 py-3 bg-[#F2F7FF] text-primary focus:border focus:outline-none focus:border-primary rounded-md"
               type="text"
               placeholder="Last Name"
             />
@@ -230,7 +234,7 @@ const FirstTimers = () => {
             />
           </div>
           {/* Gender and Marital Status */}
-          <div className="flex space-x-10">
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10">
             <div className="flex flex-col space-y-1">
               <p>Gender</p>
               <div className="flex items-center space-x-4">
@@ -287,7 +291,7 @@ const FirstTimers = () => {
             </div>
           </div>
           {/* BirthDate and Age Group */}
-          <div className="flex space-x-3">
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-3">
             <div className="flex space-x-3">
               <div className="flex flex-col space-y-1">
                 <label htmlFor="Birth Day" className="">
@@ -313,7 +317,9 @@ const FirstTimers = () => {
                   className="px-4 py-3 bg-[#F2F7FF] text-primary focus:border focus:outline-none focus:border-primary resize-none rounded-md"
                 >
                   {months.map((month) => (
-                    <option value={month} label={month} key={month} />
+                    <option value={month} label={month} key={month}>
+                      {month}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -329,7 +335,9 @@ const FirstTimers = () => {
                 className="px-4 py-3 bg-[#F2F7FF] text-primary focus:border focus:outline-none focus:border-primary resize-none rounded-md"
               >
                 {ageGroups.map((ageGroup) => (
-                  <option value={ageGroup} label={ageGroup} key={ageGroup} />
+                  <option value={ageGroup} label={ageGroup} key={ageGroup}>
+                    {ageGroup}
+                  </option>
                 ))}
               </select>
             </div>
@@ -346,10 +354,18 @@ const FirstTimers = () => {
               id="communicationTool"
               className="px-4 py-3 bg-[#F2F7FF] text-primary focus:border focus:outline-none focus:border-primary resize-none rounded-md"
             >
-              <option value="First time visitor" label="First time visitor" />
-              <option value="Returning visitor" label="Returning visitor" />
-              <option value="New to Area" label="New to Area" />
-              <option value="Visiting Area" label="Visiting Area" />
+              <option value="First time visitor" label="First time visitor">
+                First time visitor
+              </option>
+              <option value="Returning visitor" label="Returning visitor">
+                Returning visitor
+              </option>
+              <option value="New to Area" label="New to Area">
+                New to Area
+              </option>
+              <option value="Visiting Area" label="Visiting Area">
+                Visiting Area
+              </option>
             </select>
           </div>
           {/* Visitation */}
@@ -398,8 +414,12 @@ const FirstTimers = () => {
               id="communicationTool"
               className="px-4 py-3 bg-[#F2F7FF] text-primary focus:border focus:outline-none focus:border-primary resize-none rounded-md"
             >
-              <option value="Telephone Call" label="Telephone Call" />
-              <option value="SMS / Whatsapp" label="SMS / Whatsapp" />
+              <option value="Telephone Call" label="Telephone Call">
+                Telephone Call
+              </option>
+              <option value="SMS / Whatsapp" label="SMS / Whatsapp">
+                SMS / Whatsapp
+              </option>
             </select>
           </div>
           {/* Submit Button */}

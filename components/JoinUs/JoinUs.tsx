@@ -187,8 +187,12 @@ const JoinUs = ({ title, detail }: FormTitle) => {
                 name="firstTime"
                 className="px-4 py-3 bg-[#F2F7FF] text-primary w-full focus:border focus:outline-none focus:border-primary resize-none rounded-md"
               >
-                <option value="Yes" label="Yes" />
-                <option value="No" label="No" />
+                <option value="Yes" label="Yes">
+                  Yes
+                </option>
+                <option value="No" label="No">
+                  No
+                </option>
               </select>
             </div>
           </div>
