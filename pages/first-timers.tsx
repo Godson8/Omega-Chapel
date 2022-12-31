@@ -160,7 +160,7 @@ const FirstTimers = () => {
           className="flex flex-col space-y-4 w-auto"
         >
           <h1 className="text-2xl font-bold text-center mb-8">
-            First Timer's Welcome Card
+            First Timers Welcome Card
           </h1>
           {/* First and Last Name */}
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
