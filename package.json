@@ -2,7 +2,6 @@
   "name": "omega",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://omegachapel.org",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,7 +13,9 @@
     "@emotion/styled": "^11.10.4",
     "@mui/lab": "^5.0.0-alpha.100",
     "@mui/material": "^5.10.6",
+    "@mui/x-date-pickers": "^5.0.12",
     "dateformat": "^5.0.3",
+    "dayjs": "^1.11.7",
     "firebase": "^9.10.0",
     "flutterwave-react-v3": "^1.3.0",
     "gsap": "^3.11.2",

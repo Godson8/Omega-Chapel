@@ -71,8 +71,8 @@ const Summary = () => {
       logo: "/logo.png",
     },
   };
-  console.log(config);
-  console.log(props);
+  // console.log(config);
+  // console.log(props);
 
   const handleFlutterPayment = useFlutterwave(config);
 
@@ -107,7 +107,7 @@ const Summary = () => {
           onClick={() => {
             handleFlutterPayment({
               callback: (response) => {
-                console.log(response);
+                // console.log(response);
                 closePaymentModal(); // this will close the modal programmatically
               },
               onClose: () => {},

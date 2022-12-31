@@ -16,6 +16,7 @@ import { Pagination, Navigation } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
 import { IoCallSharp, IoMail } from "react-icons/io5";
+import Head from "next/head";
 const kiddies = () => {
   const images = [
     "f.png",
@@ -33,6 +34,11 @@ const kiddies = () => {
   ];
   return (
     <div className="container space-y-10 md:space-y-[100px]">
+      <Head>
+        <title>Omega Chapel - Kiddies -</title>
+        <meta name="description" content="Omega Chapel - Kiddies -" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <PageHeader
         title="Kiddies"
         subTitle1="Generations"

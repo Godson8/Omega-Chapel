@@ -1,10 +1,16 @@
 import PageHeader from "../components/PageHeader/PageHeader";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Link from "next/link";
+import Head from "next/head";
 
 const mission = () => {
   return (
     <div className="container">
+      <Head>
+        <title>Omega Chapel - Our Mission -</title>
+        <meta name="description" content="Omega Chapel - Our Mission -" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <PageHeader
         title="Our Mission"
         subTitle1="About"

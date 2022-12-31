@@ -17,7 +17,7 @@ import styles from "../styles/Home.module.css";
 const endPoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.PLAYLIST_ID}&key=${process.env.YOUTUBE_KEY}`;
 
 const Home = ({ data }: any) => {
-  console.log(data);
+  // console.log(data);
   const latestSermonImage = data.items[0].snippet.thumbnails.maxres.url;
   const latestSermonVideoId = data.items[0].snippet.resourceId.videoId;
   const latestSermonTitle = data.items[0].snippet.title;

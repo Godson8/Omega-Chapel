@@ -48,7 +48,7 @@ const generationsList = [
     id: 5,
     title: "Singles",
     subTitle: "Unmarried young adults in search of spouse and success.",
-    image: "",
+    image: "/singles.JPG",
     link: "",
   },
   {

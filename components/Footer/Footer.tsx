@@ -7,7 +7,6 @@ import { AiFillYoutube } from "react-icons/ai";
 
 const Footer = () => {
   const year = new Date().getFullYear();
-  console.log(year);
   return (
     <div className="bg-[#131825] mt-16 md:mt-[134px] text-white">
       <div className="container space-y-14 text-white pb-16 md:pb-28">
@@ -173,8 +172,8 @@ const Footer = () => {
           </div>
         </div>
         <p className="text-white text-sm text-center">
-          All rights Reserved. &copy; {year} Omega Chapel International Churches
-          . All Rights Reserved
+          All rights Reserved. &copy; {year} Omega Chapel International
+          Churches.
         </p>
       </div>
     </div>

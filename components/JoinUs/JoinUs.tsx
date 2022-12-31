@@ -42,7 +42,7 @@ const JoinUs = ({ title, detail }: FormTitle) => {
 
   const phoneNumberChange = (value: any) => {
     setValue(value), { ...register("phoneNumber") };
-    console.log(value);
+    // console.log(value);
   };
 
   const { register, getValues, handleSubmit, formState, reset } =
@@ -65,7 +65,7 @@ const JoinUs = ({ title, detail }: FormTitle) => {
   };
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    // console.log(data);
     reset();
     addDoc(databaseRef, {
       "First Name": data.firstName,
@@ -121,7 +121,14 @@ const JoinUs = ({ title, detail }: FormTitle) => {
             <p>Contact*</p>
             <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
               <input
-                {...register("email", { required: true })}
+                {...register("email", {
+                  required: true,
+                  pattern: {
+                    value:
+                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "Please enter a valid email",
+                  },
+                })}
                 autoComplete="nope"
                 name="email"
                 className="px-4 py-3 bg-[#F2F7FF] text-primary w-full md:w-[300px] focus:border focus:outline-none focus:border-primary rounded-md"
@@ -130,7 +137,10 @@ const JoinUs = ({ title, detail }: FormTitle) => {
               />
               <PhoneInputWithCountrySelect
                 className="space-x-2  text-primary h-full focus:border focus:outline-none focus:border-primary"
-                {...register("phoneNumber")}
+                {...register("phoneNumber", {
+                  required: true,
+                  minLength: 7,
+                })}
                 autoComplete="nope"
                 value={value}
                 international
@@ -222,8 +232,8 @@ const JoinUs = ({ title, detail }: FormTitle) => {
       <Snackbar open={open} autoHideDuration={8000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
           <AlertTitle>Success</AlertTitle>
-          Thank you, {getValues("firstName")}. Our welcome team will get in
-          touch with you as soon as possible 😊
+          Thank you. Our welcome team will get in touch with you as soon as
+          possible 😊
         </Alert>
       </Snackbar>
       <Snackbar open={errorOpen} autoHideDuration={8000} onClose={handleClose}>

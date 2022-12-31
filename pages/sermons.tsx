@@ -11,16 +11,22 @@ import { Grid, Navigation } from "swiper";
 
 import "swiper/css/bundle";
 import Link from "next/link";
+import Head from "next/head";
 
 const endPoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=18&playlistId=${process.env.PLAYLIST_ID}&key=${process.env.YOUTUBE_KEY}`;
 
 const sermons = ({ data }: any) => {
-  console.log(data);
+  // console.log(data);
   const latestSermonImage = data.items[0].snippet.thumbnails.maxres.url;
   const latestSermonVideoId = data.items[0].snippet.resourceId.videoId;
   const latestSermonTitle = data.items[0].snippet.title;
   return (
     <div className="container">
+      <Head>
+        <title>Omega Chapel - Sermons -</title>
+        <meta name="description" content="Omega Chapel - Sermons -" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <PageHeader
         title="Sermons"
         subTitle1="Media"

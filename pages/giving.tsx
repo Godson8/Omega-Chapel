@@ -16,6 +16,7 @@ import { PaystackProps } from "react-paystack/dist/types";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 import Router from "next/router";
 import summary from "./summary";
+import Head from "next/head";
 
 interface FormValues {
   firstName: string;
@@ -35,7 +36,7 @@ const Giving = () => {
 
   const phoneNumberChange = (value: any) => {
     setValue(value), { ...register("phoneNumber") };
-    console.log(value);
+    // console.log(value);
   };
 
   const { register, getValues, handleSubmit, formState, reset } =
@@ -46,7 +47,7 @@ const Giving = () => {
   };
 
   const onSubmit = (data: FormValues) => {
-    console.log(data);
+    // console.log(data);
     // reset();
 
     addDoc(databaseRef, {
@@ -82,6 +83,11 @@ const Giving = () => {
 
   return (
     <div className="container">
+      <Head>
+        <title>Omega Chapel - Giving -</title>
+        <meta name="description" content="Omega Chapel - Giving -" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <PageHeader
         title="Giving"
         subTitle1="Omega"

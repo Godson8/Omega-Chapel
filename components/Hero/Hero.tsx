@@ -37,6 +37,7 @@ const Hero = () => {
           layout="fill"
           objectFit="cover"
           className="object-cover"
+          alt="header"
         />
       </div>
       <div

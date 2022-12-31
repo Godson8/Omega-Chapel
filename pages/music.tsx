@@ -13,16 +13,24 @@ import { Grid, Navigation } from "swiper";
 
 import "swiper/css/bundle";
 import Link from "next/link";
+import Head from "next/head";
 
 const endPoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=18&playlistId=${process.env.CHOIR_ID}&key=${process.env.YOUTUBE_KEY}`;
 
 const music = ({ data }: any) => {
-  console.log(data);
+  // console.log(data);
   const latestMusicImage =
-    data.items[data.items.length - 1].snippet.thumbnails.high.url;
+    data.items[data.items.length - 1].snippet.thumbnails.maxres.url;
+  const latestMusicVideoId =
+    data.items[data.items.length - 1].snippet.resourceId.videoId;
   const latestMusicTitle = data.items[data.items.length - 1].snippet.title;
   return (
     <div className="container">
+      <Head>
+        <title>Omega Chapel - Worship -</title>
+        <meta name="description" content="Omega Chapel - Worship -" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <PageHeader
         title="Music"
         subTitle1="Media"
@@ -30,7 +38,7 @@ const music = ({ data }: any) => {
         image="music.JPG"
       />
 
-      {/* Latest Sermon */}
+      {/* Latest Music */}
       <div className="mt-16 md:mt-[100px] rounded-xl ">
         <div className="relative h-[550px] rounded-xl shadow-nav">
           <Image
@@ -49,7 +57,12 @@ const music = ({ data }: any) => {
               {latestMusicTitle.trim()}
             </h1>
             <div className="flex xs:space-y-3 xs:flex-col xsOpp:space-x-4">
-              <Button filled title="Watch Video" />
+              <Link
+                href={`https://www.youtube.com/watch?v=${latestMusicVideoId}`}
+                passHref
+              >
+                <Button filled title="Watch Video" />
+              </Link>
             </div>
           </div>
         </div>

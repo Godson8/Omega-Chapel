@@ -11,6 +11,7 @@ import { database } from "../firebaseConfig";
 import Newsletter from "../components/Newsletter/Newsletter";
 import dateFormat from "dateformat";
 import Link from "next/link";
+import Head from "next/head";
 
 // const getServerSideProps = async () => {
 //    const qw =  await getDocs(programRef);
@@ -44,9 +45,14 @@ const Schedule = () => {
       );
     });
   };
-  console.log(programs);
+  // console.log(programs);
   return (
     <div className="container">
+      <Head>
+        <title>Omega Chapel - Our Schedule -</title>
+        <meta name="description" content="Omega Chapel - Our Schedule -" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <PageHeader
         title="Our Schedule"
         subTitle1="About"

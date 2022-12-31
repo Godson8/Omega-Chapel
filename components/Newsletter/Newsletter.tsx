@@ -8,6 +8,9 @@ import { Oval } from "react-loader-spinner";
 import { Alert, AlertTitle, Snackbar } from "@mui/material";
 
 interface FormValues {
+  firstName: string;
+  lastName: string;
+  phoneNumber: number;
   email: string;
 }
 const Newsletter = () => {
@@ -36,10 +39,14 @@ const Newsletter = () => {
   };
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    // console.log(data);
     reset();
     addDoc(databaseRef, {
+      FirstName: data.firstName,
+      LastName: data.lastName,
+      PhoneNumber: data.phoneNumber,
       Email: data.email,
+
       date: dateFormat(new Date()),
     })
       .then(() => {
@@ -61,12 +68,37 @@ const Newsletter = () => {
       <div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="w-full md:space-x-[24px] flex flex-col items-center space-y-4 md:space-y-0 md:flex-row justify-center"
+          className="w-full flex flex-col items-center space-y-4 justify-center  max-w-[450px] mx-auto"
         >
+          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row w-full justify-between">
+            <input
+              {...register("firstName", { required: true })}
+              placeholder="First Name"
+              className="text-sm px-[18px] py-3 bg-[#F2F7FF] text-primary focus:border focus:outline-none focus:border-primary rounded-md"
+            />
+            <input
+              {...register("lastName", { required: true })}
+              placeholder="Last Name"
+              className="text-sm px-[18px] py-3 bg-[#F2F7FF] text-primary focus:border focus:outline-none focus:border-primary rounded-md"
+            />
+          </div>
           <input
-            {...register("email", { required: true })}
+            {...register("phoneNumber", { required: true, minLength: 7 })}
+            placeholder="Phone Number"
+            type="number"
+            className="text-sm px-[18px] py-3 bg-[#F2F7FF] text-primary w-full focus:border focus:outline-none focus:border-primary rounded-md"
+          />
+          <input
+            {...register("email", {
+              required: true,
+              pattern: {
+                value:
+                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                message: "Please enter a valid email",
+              },
+            })}
             placeholder="Email address"
-            className="text-sm px-[18px] py-3 bg-[#F2F7FF] text-primary w-full max-w-[377px] focus:border focus:outline-none focus:border-primary rounded-md"
+            className="text-sm px-[18px] py-3 bg-[#F2F7FF] text-primary w-full focus:border focus:outline-none focus:border-primary rounded-md"
           />
           <button
             className="bg-secondary text-white text-sm px-[18px] py-3 font-bold w-fit rounded-xl hover:scale-105 transition-transform duration-200 ease-in-out flex items-center space-x-1 disabled:bg-tertiary disabled:text-secondary"

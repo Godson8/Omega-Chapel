@@ -17,6 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoCallSharp, IoMail } from "react-icons/io5";
 import ContactShort from "../components/ContactShort/ContactShort";
+import Head from "next/head";
 const youths = () => {
   const images = [
     "f.JPG",
@@ -24,7 +25,7 @@ const youths = () => {
     "a.JPG",
     "b.JPG",
     "c.JPG",
-    "youths.jpg",
+    "youths.JPG",
     "d.JPG",
     "e.JPG",
     "g.JPG",
@@ -34,6 +35,11 @@ const youths = () => {
   ];
   return (
     <div className="container space-y-10 md:space-y-[100px]">
+      <Head>
+        <title>Omega Chapel - Youths -</title>
+        <meta name="description" content="Omega Chapel - Youths -" />
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <PageHeader title="Youths" subTitle1="Generations" subTitle2="Youths" />
       <div className="space-y-4 md:space-y-8 flex flex-col items-center">
         <h1 className="text-[24px] md:text-[40px] font-black text-center">
