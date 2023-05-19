@@ -5,6 +5,19 @@ const nextConfig = {
   images: {
     domains: ["i.ytimg.com"],
   },
+
+  async rewrites() {
+    return [
+      {
+        source: "/blog",
+        destination: "/blog",
+      },
+      {
+        source: "/:blog",
+        destination: "/blog",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
