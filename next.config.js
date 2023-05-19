@@ -10,11 +10,11 @@ const nextConfig = {
     return [
       {
         source: "/blog",
-        destination: "/blog",
+        destination: "https://www.blog.omegachapel.org",
       },
       {
         source: "/:blog",
-        destination: "/blog",
+        destination: "https://www.blog.omegachapel.org",
       },
     ];
   },
