@@ -36,6 +36,7 @@
     "react-paystack": "^4.0.1",
     "react-phone-number-input": "^3.2.11",
     "sanity": "^3.11.1",
+    "sanity-plugin-iframe-pane": "^2.3.1",
     "swiper": "^8.4.2"
   },
   "devDependencies": {
