@@ -1,9 +1,9 @@
 import Head from "next/head";
 import BlogNavBar from "../../components/Blog/BlogNavBar/BlogNavBar";
 
-const BlogLayout = ({ children }: any) => {
+const BlogLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <div className="bg-[#F3F3F3]">
       <Head>
         <title>Omega Chapel - Blog -</title>
         <meta name="description" content="Omega Chapel - Welcome Home -" />
@@ -11,7 +11,7 @@ const BlogLayout = ({ children }: any) => {
       </Head>
       <BlogNavBar />
       {children}
-    </>
+    </div>
   );
 };
 

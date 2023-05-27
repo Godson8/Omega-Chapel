@@ -1,3 +1,4 @@
+import { getDefaultDocumentNode } from "./structure";
 import { myTheme } from "./theme";
 /**
  * This configuration is used to for the Sanity Studio that’s mounted on the `\src\app\studio\[[...index]]\page.tsx` route
@@ -19,7 +20,7 @@ export default defineConfig({
   // Add and edit the content schema in the './sanity/schema' folder
   schema,
   plugins: [
-    deskTool(),
+    deskTool({ defaultDocumentNode: getDefaultDocumentNode }),
     // Vision is a tool that lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
