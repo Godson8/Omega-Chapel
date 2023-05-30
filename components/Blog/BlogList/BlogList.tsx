@@ -8,9 +8,8 @@ type Props = {
 };
 
 function BlogList({ posts }: Props) {
-  console.log(posts.length);
   return (
-    <div className="font-primary container mt-5 md:mt-20">
+    <div className="font-primary">
       <div className="p-2 bg-white">
         <input
           type="search"
