@@ -4,6 +4,7 @@ import { client } from "../../../sanity/lib/client";
 import urlFor from "../../../sanity/lib/UrlFor";
 import { Post } from "../../../typins";
 import { PortableText } from "@portabletext/react";
+import RichTextComponents from "../../../components/Blog/RichTextComponents/RichTextComponents";
 
 type Props = {
   post: Post;
@@ -26,6 +27,7 @@ const Post = ({ post }: Props) => {
                     src={urlFor(post.author.image).url()}
                     layout="fill"
                     className="rounded-lg"
+                    alt={post.author.name}
                   />
                 </div>
                 <p className="font-medium">Written by {post.author.name}</p>
@@ -49,11 +51,12 @@ const Post = ({ post }: Props) => {
               src={urlFor(post.mainImage).url()}
               layout="fill"
               className="object-cover object-center mx-auto rounded-xl"
+              alt={post.title}
             />
           </div>
         </div>
       </section>
-      {/* <PortableText value={post.body} components={RichTextComponents} /> */}
+      <PortableText value={post.body} components={RichTextComponents} />
     </article>
   );
 };

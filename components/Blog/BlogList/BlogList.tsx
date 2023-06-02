@@ -55,6 +55,7 @@ function BlogList({ posts }: Props) {
                       <div className="w-5 h-5 relative rounded-full">
                         <Image
                           src={urlFor(post.author.image).url()}
+                          alt={post.author.name}
                           layout="fill"
                           className="rounded-full"
                         />
