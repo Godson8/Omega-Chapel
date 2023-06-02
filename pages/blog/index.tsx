@@ -12,27 +12,27 @@ const query = groq`
 `;
 
 const blog = ({ preview }: any) => {
-  if (preview) {
-    return (
-      <PreviewSuspense
-        fallback={
-          <div>
-            <p className="text-center text-lg">Loading preview...</p>
-          </div>
-        }
-      >
-        <PreviewBlogList query={query} />
-      </PreviewSuspense>
-    );
-  }
-  return <>Not in preview mode</>;
+  // if (preview) {
+  return (
+    <PreviewSuspense
+      fallback={
+        <div>
+          <p className="text-center text-lg">Loading preview...</p>
+        </div>
+      }
+    >
+      <PreviewBlogList query={query} />
+    </PreviewSuspense>
+  );
+  // }
+  // return <>Not in preview mode</>;
 };
 
 export async function getStaticProps(context: any) {
   const preview = context.preview || false;
   // Additional code for fetching blog data
   const posts = await client.fetch(query);
-  console.log(posts);
+  // console.log(posts);
   return {
     props: {
       preview,
