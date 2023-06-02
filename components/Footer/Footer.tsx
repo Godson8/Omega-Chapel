@@ -100,6 +100,9 @@ const Footer = () => {
                 <Link href="/music">
                   <p className="cursor-pointer text-sm">Music</p>
                 </Link>
+                <Link href="/blog">
+                  <p className="cursor-pointer text-sm">Blog</p>
+                </Link>
                 {/* <Link href="/">
             <p className="cursor-pointer text-sm">Pictures</p>
           </Link> */}
