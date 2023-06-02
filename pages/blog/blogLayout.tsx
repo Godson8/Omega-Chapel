@@ -1,5 +1,6 @@
 import Head from "next/head";
 import BlogNavBar from "../../components/Blog/BlogNavBar/BlogNavBar";
+import Footer from "../../components/Footer/Footer";
 
 const BlogLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,6 +12,7 @@ const BlogLayout = ({ children }: { children: React.ReactNode }) => {
       </Head>
       <BlogNavBar />
       <div className="container mt-5 md:mt-20">{children}</div>
+      <Footer />
     </div>
   );
 };

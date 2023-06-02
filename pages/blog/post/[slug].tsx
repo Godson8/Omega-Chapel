@@ -11,7 +11,7 @@ type Props = {
 };
 
 const Post = ({ post }: Props) => {
-  console.log(post);
+  //   console.log(post);
   return (
     <article>
       <section>

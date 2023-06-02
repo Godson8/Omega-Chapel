@@ -181,6 +181,12 @@ const NavBar = () => {
                         </p>
                       </div>
                     </Link>
+                    <Link href="/blog">
+                      <div className="hover:bg-tertiary p-2 cursor-pointer">
+                        <h1 className="text-sm font-bold">Blog</h1>
+                        <p className="text-xs">Writings of Power</p>
+                      </div>
+                    </Link>
                     {/* <Link href="/pictures">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm font-bold">Pictures</h1>
@@ -323,6 +329,11 @@ const NavBar = () => {
                   <Link href="/music">
                     <p onClick={handleToggle} className="text-sm">
                       Music
+                    </p>
+                  </Link>
+                  <Link href="/blog">
+                    <p onClick={handleToggle} className="text-sm">
+                      Blog
                     </p>
                   </Link>
                   {/* <Link href="/pictures" >
