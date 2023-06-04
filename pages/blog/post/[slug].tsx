@@ -5,6 +5,7 @@ import urlFor from "../../../sanity/lib/UrlFor";
 import { Post } from "../../../typins";
 import { PortableText } from "@portabletext/react";
 import RichTextComponents from "../../../components/Blog/RichTextComponents/RichTextComponents";
+import Banner from "../../../components/Blog/Banner/Banner";
 
 type Props = {
   post: Post;
@@ -13,7 +14,7 @@ type Props = {
 const Post = ({ post }: Props) => {
   //   console.log(post);
   return (
-    <article>
+    <article className="container">
       <section>
         <div className="space-y-8 md:space-y-14">
           <h1 className="text-3xl font-bold md:text-5xl text-center max-w-2xl mx-auto ">
@@ -57,6 +58,9 @@ const Post = ({ post }: Props) => {
         </div>
       </section>
       <PortableText value={post.body} components={RichTextComponents} />
+      <div className="mt-10">
+        <Banner negHeight={false} />
+      </div>
     </article>
   );
 };

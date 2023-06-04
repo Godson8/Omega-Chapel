@@ -69,6 +69,9 @@ body {
   margin-right: auto;
   padding: 15px !important;
 }
+.blogSwiper {
+  padding: 0 !important;
+}
 
 .swiper-slide-sermons {
   height: 112px !important;
@@ -77,4 +80,10 @@ body {
 .swiper-button-next,
 .swiper-button-prev {
   color: #3c64b1 !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 }

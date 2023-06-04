@@ -11,7 +11,8 @@ const BlogLayout = ({ children }: { children: React.ReactNode }) => {
         <link rel="icon" href="/logo.png" />
       </Head>
       <BlogNavBar />
-      <div className="container mt-5 md:mt-20">{children}</div>
+
+      <div>{children}</div>
       <Footer />
     </div>
   );
