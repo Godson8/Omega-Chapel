@@ -6,6 +6,7 @@ import { Post } from "../../../typins";
 import { PortableText } from "@portabletext/react";
 import RichTextComponents from "../../../components/Blog/RichTextComponents/RichTextComponents";
 import Banner from "../../../components/Blog/Banner/Banner";
+import Share from "../../../components/Blog/Share/Share";
 
 type Props = {
   post: Post;
@@ -58,8 +59,9 @@ const Post = ({ post }: Props) => {
         </div>
       </section>
       <PortableText value={post.body} components={RichTextComponents} />
-      <div className="mt-10">
-        <Banner negHeight={false} />
+      <div className="mt-10 grid border-dashed border-t-[1px] border-primary border-opacity-25">
+        <Banner negHeight={false} noBg={true} />
+        <Share title={post.slug.current} />
       </div>
     </article>
   );
