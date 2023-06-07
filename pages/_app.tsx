@@ -9,15 +9,16 @@ import BlogLayout from "./blog/blogLayout";
 function MyApp({ Component, pageProps, router }: AppProps) {
   // Check if the current page is the one you want to exclude from the layout
 
-  const isBlogPage = router.pathname.startsWith("/blog");
+  const isMainBlogPage = router.pathname === "/blog";
   const isDynamicURL = router.route === "/studio/[[...index]]";
+  const isBlogPost = router.pathname.startsWith("/blog/post");
   // const excludeFromLayout =
   //   isDynamicURL || excludedPaths.includes(router.pathname);
 
   // Render the page without the layout if it's excluded
-  if (isDynamicURL) {
+  if (isDynamicURL || isBlogPost) {
     return <Component {...pageProps} />;
-  } else if (isBlogPage) {
+  } else if (isMainBlogPage) {
     return (
       <BlogLayout>
         <Component {...pageProps} />

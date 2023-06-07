@@ -1,12 +1,27 @@
 import Link from "next/link";
 import { useState } from "react";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { Alert, Snackbar } from "@mui/material";
 
 const Share = ({ title }: any) => {
   const [showDiv, setShowDiv] = useState(false);
-
+  const [copied, setCopied] = useState(false);
   const handleClick = () => {
     setShowDiv(true);
+  };
+
+  const handleCopy = () => {
+    setCopied(true);
+  };
+
+  const handleClose = () => {
+    setCopied(false);
   };
 
   return (
@@ -18,43 +33,68 @@ const Share = ({ title }: any) => {
             <div>
               <div className="flex space-x-4">
                 <div className="cursor-pointer">
-                  <Link href="https://www.facebook.com/Omega-Chapel-106683021365817">
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=https%3A//www.omegachapel.org/blog/post/${title}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <div className="flex justify-center items-center h-7 w-7 border rounded-full">
                       <FaFacebookF color="white" size={12} />
                     </div>
-                  </Link>
+                  </a>
                 </div>
                 <div className="cursor-pointer">
-                  <Link href="https://www.instagram.com/omega.chapel/">
+                  <a
+                    href={`mailto:?subject=${title}&body=Check%20out%20this%20article:%20https%3A//www.omegachapel.org/blog/post/${title}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <div className="flex justify-center items-center h-7 w-7 border rounded-full">
-                      <FaInstagram color="white" size={12} />
+                      <FaEnvelope color="white" size={12} />
                     </div>
-                  </Link>
+                  </a>
                 </div>
                 <div className="cursor-pointer">
-                  <Link href="https://www.instagram.com/omega.chapel/">
+                  <a
+                    href={`https://twitter.com/intent/tweet?url=https%3A//www.omegachapel.org/blog/post/${title}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <div className="flex justify-center items-center h-7 w-7 border rounded-full">
                       <FaTwitter color="white" size={12} />
                     </div>
-                  </Link>
+                  </a>
                 </div>
-
-                <div className="cursor-pointer">
-                  <div className="flex justify-center items-center h-7 w-7 ">
-                    <p className="text-white text-[8px] text-center">
-                      COPY LINK
-                    </p>
+                <CopyToClipboard
+                  text={`https://www.omegachapel.org/blog/post/${title}`}
+                  onCopy={handleCopy}
+                >
+                  <div className="cursor-pointer">
+                    <div className="flex justify-center items-center h-7 w-7 ">
+                      <p className="text-white text-[8px] text-center">
+                        COPY LINK
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </CopyToClipboard>
               </div>
             </div>
           </div>
           <input
             type="text"
-            className="p-2 text-xs  bg-primary text-white w-full focus:border focus:outline-none focus:border-primary rounded-md"
+            className="p-2 text-xs  bg-primary text-white w-full focus:border border mt-2 border-tertiary border-opacity-25 focus:outline-none focus:border-primary rounded-md"
             readOnly
             value={`https://www.omegachapel.org/blog/post/${title}`}
           />
+          <Snackbar open={copied} autoHideDuration={3000} onClose={handleClose}>
+            <Alert
+              onClose={handleClose}
+              severity="success"
+              sx={{ width: "100%" }}
+            >
+              Link copied to clipboard
+            </Alert>
+          </Snackbar>
         </div>
       ) : (
         <>
