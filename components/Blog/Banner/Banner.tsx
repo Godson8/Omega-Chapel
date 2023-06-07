@@ -5,6 +5,8 @@ import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import Link from "next/link";
 
 const Banner = ({ negHeight, noBg }: any) => {
+  const iconColor = noBg ? "#333333" : "white";
+
   return (
     <div className="container z-10 relative">
       <div
@@ -15,7 +17,7 @@ const Banner = ({ negHeight, noBg }: any) => {
         <Link href="/giving">
           <div className="flex flex-col items-center justify-between cursor-pointer hover:scale-105 transition-transform duration-200 ease-in-out">
             <div>
-              <RiMoneyDollarCircleLine color="white" size={20} />
+              <RiMoneyDollarCircleLine color={iconColor} size={20} />
             </div>
             <p
               className={`${
@@ -29,7 +31,7 @@ const Banner = ({ negHeight, noBg }: any) => {
         <Link href="https://www.youtube.com/@omegachapel?sub_confirmation=1">
           <div className="flex flex-col items-center justify-between cursor-pointer hover:scale-105 transition-transform duration-200 ease-in-out">
             <div>
-              <BsYoutube color="white" size={18} />
+              <BsYoutube color={iconColor} size={18} />
             </div>
             <p
               className={`${
@@ -45,12 +47,12 @@ const Banner = ({ negHeight, noBg }: any) => {
           <div className="flex space-x-2">
             <div className="cursor-pointer hover:scale-105 transition-transform duration-200 ease-in-out">
               <Link href="https://www.instagram.com/omega.chapel/">
-                <FaInstagram color="white" size={16} />
+                <FaInstagram color={iconColor} size={16} />
               </Link>
             </div>
             <div className="cursor-pointer hover:scale-105 transition-transform duration-200 ease-in-out">
               <Link href="https://www.facebook.com/Omega-Chapel-106683021365817">
-                <FaFacebookF color="white" size={16} />
+                <FaFacebookF color={iconColor} size={16} />
               </Link>
             </div>
           </div>
@@ -65,7 +67,7 @@ const Banner = ({ negHeight, noBg }: any) => {
         <Link href="https://www.youtube.com/@omegachapel/videos">
           <div className="md:flex md:flex-col md:items-center justify-between hidden cursor-pointer hover:scale-105 transition-transform duration-200 ease-in-out">
             <div>
-              <BsPlay color="white" size={20} />
+              <BsPlay color={iconColor} size={20} />
             </div>
             <p
               className={`${
