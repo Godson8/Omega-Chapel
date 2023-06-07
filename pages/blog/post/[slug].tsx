@@ -7,6 +7,8 @@ import { PortableText } from "@portabletext/react";
 import RichTextComponents from "../../../components/Blog/RichTextComponents/RichTextComponents";
 import Banner from "../../../components/Blog/Banner/Banner";
 import Share from "../../../components/Blog/Share/Share";
+import Layout from "../../../components/Layout/Layout";
+import BlogLayout from "../blogLayout";
 
 type Props = {
   post: Post;
@@ -15,55 +17,57 @@ type Props = {
 const Post = ({ post }: Props) => {
   //   console.log(post);
   return (
-    <article className="container">
-      <section>
-        <div className="space-y-8 md:space-y-14">
-          <h1 className="text-3xl font-bold md:text-5xl text-center max-w-2xl mx-auto ">
-            {post.title}
-          </h1>
-          <div>
-            <div className="flex items-center">
-              <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 relative">
-                  <Image
-                    src={urlFor(post.author.image).url()}
-                    layout="fill"
-                    className="rounded-lg"
-                    alt={post.author.name}
-                  />
+    <BlogLayout title={post.title} image={urlFor(post.mainImage).url()}>
+      <article className="container">
+        <section>
+          <div className="space-y-8 md:space-y-14">
+            <h1 className="text-3xl font-bold md:text-5xl text-center max-w-2xl mx-auto ">
+              {post.title}
+            </h1>
+            <div>
+              <div className="flex items-center">
+                <div className="flex items-center space-x-2">
+                  <div className="w-10 h-10 relative">
+                    <Image
+                      src={urlFor(post.author.image).url()}
+                      layout="fill"
+                      className="rounded-lg"
+                      alt={post.author.name}
+                    />
+                  </div>
+                  <p className="font-medium">Written by {post.author.name}</p>
                 </div>
-                <p className="font-medium">Written by {post.author.name}</p>
+                <div>
+                  <p>
+                    {new Date(post._createdAt).toLocaleDateString("en-US", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </p>
+                </div>
               </div>
               <div>
-                <p>
-                  {new Date(post._createdAt).toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </p>
+                <p>{}</p>
               </div>
             </div>
-            <div>
-              <p>{}</p>
+            <div className="relative w-full h-48 md:h-80">
+              <Image
+                src={urlFor(post.mainImage).url()}
+                layout="fill"
+                className="object-cover object-center mx-auto rounded-xl"
+                alt={post.title}
+              />
             </div>
           </div>
-          <div className="relative w-full h-48 md:h-80">
-            <Image
-              src={urlFor(post.mainImage).url()}
-              layout="fill"
-              className="object-cover object-center mx-auto rounded-xl"
-              alt={post.title}
-            />
-          </div>
+        </section>
+        <PortableText value={post.body} components={RichTextComponents} />
+        <div className="mt-10 grid border-dashed border-t-[1px] border-primary border-opacity-25">
+          <Banner negHeight={false} noBg={true} />
+          <Share title={post.slug.current} />
         </div>
-      </section>
-      <PortableText value={post.body} components={RichTextComponents} />
-      <div className="mt-10 grid border-dashed border-t-[1px] border-primary border-opacity-25">
-        <Banner negHeight={false} noBg={true} />
-        <Share title={post.slug.current} />
-      </div>
-    </article>
+      </article>
+    </BlogLayout>
   );
 };
 
