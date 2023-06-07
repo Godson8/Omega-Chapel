@@ -1,6 +1,7 @@
 import Image from "next/image";
+import PortableText from "react-portable-text";
 import urlFor from "../../../sanity/lib/UrlFor";
-import { Post } from "../../../typins";
+import { Block, Post } from "../../../typins";
 import ClientSideRoute from "../ClientSideRoute/ClientSideRoute";
 import HeaderSwiper from "../HeaderSwiper/HeaderSwiper";
 
@@ -8,7 +9,20 @@ type Props = {
   posts: Post[];
 };
 
+function extractTextFromBlocks(blocks: Block[]): string {
+  return blocks
+    .map((block) => block.children?.map((child) => child.text).join(""))
+    .join("");
+}
+
 function BlogList({ posts }: Props) {
+  function calculateMinutesToRead(text: string) {
+    const wordsPerMinute = 200; // Adjust the value according to your preference
+    const words = text.split(" ");
+    const minutes = Math.ceil(words.length / wordsPerMinute);
+    return minutes;
+  }
+
   return (
     <div className="font-primary">
       <HeaderSwiper />
@@ -68,7 +82,12 @@ function BlogList({ posts }: Props) {
                         </p>
                       </div>
                       <div className="flex gap-3">
-                        <p className="text-xs">3 min Read</p>
+                        <p className="text-xs">
+                          {calculateMinutesToRead(
+                            extractTextFromBlocks(post.body)
+                          )}{" "}
+                          min Read
+                        </p>
                         <div>
                           <div></div>
 

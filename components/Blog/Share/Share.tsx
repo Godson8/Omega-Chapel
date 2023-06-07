@@ -5,6 +5,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaTwitter,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Alert, Snackbar } from "@mui/material";
@@ -24,6 +25,12 @@ const Share = ({ title }: any) => {
     setCopied(false);
   };
 
+  const articleUrl = `https://www.omegachapel.org/blog/post/${title}`;
+
+  const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
+    `Check out this article: ${articleUrl}`
+  )}`;
+
   return (
     <div className="md:max-w-[350px] flex flex-col items-center space-y-3 justify-self-center p-3 rounded-xl border bg-primary shadow-nav">
       {showDiv ? (
@@ -32,6 +39,17 @@ const Share = ({ title }: any) => {
             <p className="text-white text-base">Share this article</p>
             <div>
               <div className="flex space-x-4">
+                <div className="cursor-pointer">
+                  <a
+                    href={whatsappShareUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="flex justify-center items-center h-7 w-7 border rounded-full">
+                      <FaWhatsapp color="white" size={15} />
+                    </div>
+                  </a>
+                </div>
                 <div className="cursor-pointer">
                   <a
                     href={`https://www.facebook.com/sharer/sharer.php?u=https%3A//www.omegachapel.org/blog/post/${title}`}
@@ -43,17 +61,7 @@ const Share = ({ title }: any) => {
                     </div>
                   </a>
                 </div>
-                <div className="cursor-pointer">
-                  <a
-                    href={`mailto:?subject=${title}&body=Check%20out%20this%20article:%20https%3A//www.omegachapel.org/blog/post/${title}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="flex justify-center items-center h-7 w-7 border rounded-full">
-                      <FaEnvelope color="white" size={12} />
-                    </div>
-                  </a>
-                </div>
+
                 <div className="cursor-pointer">
                   <a
                     href={`https://twitter.com/intent/tweet?url=https%3A//www.omegachapel.org/blog/post/${title}`}

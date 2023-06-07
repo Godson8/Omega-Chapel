@@ -9,6 +9,7 @@ import Banner from "../../../components/Blog/Banner/Banner";
 import Share from "../../../components/Blog/Share/Share";
 import Layout from "../../../components/Layout/Layout";
 import BlogLayout from "../blogLayout";
+import { BsDot } from "react-icons/bs";
 
 type Props = {
   post: Post;
@@ -20,25 +21,28 @@ const Post = ({ post }: Props) => {
     <BlogLayout title={post.title} image={urlFor(post.mainImage).url()}>
       <article className="container">
         <section>
-          <div className="space-y-8 md:space-y-14">
+          <div className="space-y-8 md:space-y-14 mt-6 md:mt-14">
             <h1 className="text-3xl font-bold md:text-5xl text-center max-w-2xl mx-auto ">
               {post.title}
             </h1>
             <div>
-              <div className="flex items-center">
+              <div className="flex items-center space-x-2 justify-center">
                 <div className="flex items-center space-x-2">
-                  <div className="w-10 h-10 relative">
+                  <div className="w-8 h-8 relative">
                     <Image
                       src={urlFor(post.author.image).url()}
                       layout="fill"
-                      className="rounded-lg"
+                      className="rounded-full"
                       alt={post.author.name}
                     />
                   </div>
-                  <p className="font-medium">Written by {post.author.name}</p>
+                  <p className="font-extrabold text-sm">
+                    Written by {post.author.name}
+                  </p>
                 </div>
+                <BsDot size={20} />
                 <div>
-                  <p>
+                  <p className="text-sm">
                     {new Date(post._createdAt).toLocaleDateString("en-US", {
                       day: "numeric",
                       month: "long",
