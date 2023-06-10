@@ -13,7 +13,7 @@ import Banner from "../Banner/Banner";
 
 const HeaderSwiper = () => {
   const images = [
-    "18.PNG",
+    "18.png",
     "14.png",
     // "16.JPG",
     // "17.JPG",
