@@ -13,18 +13,17 @@ import Banner from "../Banner/Banner";
 
 const HeaderSwiper = () => {
   const images = [
-    "f.png",
-    "a.JPG",
-    "b.JPG",
-    "c.JPG",
-    "kids.jpg",
-    "d.JPG",
-    "e.JPG",
-    "g.JPG",
-    "h.JPG",
-    "i.JPG",
-    "j.JPG",
-    "k.JPG",
+    "18.PNG",
+    "14.png",
+    // "16.JPG",
+    // "17.JPG",
+    // "18.JPG",
+    // "19.JPG",
+    // "20.JPG",
+    // "21.JPG",
+    // "22.JPG",
+    // "23.JPG",
+    // "24.JPG",
   ];
   return (
     <>
@@ -45,12 +44,13 @@ const HeaderSwiper = () => {
               {/* <div className="flex items-center h-[152px] md:h-72 "> */}
               <div className="relative h-full w-full object-cover overflow-hidden">
                 <Image
-                  src={`/kids/${image}`}
+                  src={`/founders/${image}`}
                   layout="fill"
                   objectFit="cover"
                   alt={image}
+                  className="object-top"
                   // className=" rounded-lg"
-                  objectPosition="top"
+                  // objectPosition=""
                 />
               </div>
               {/* </div> */}
