@@ -36,24 +36,20 @@ function BlogList({ posts }: Props) {
     <div className="font-primary">
       <HeaderSwiper />
       <div className="container mt-5 md:mt-20">
-        <div className="p-2 bg-white">
-          <input
-            type="search"
-            name="blogSearch"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            id=""
-            className="h-8 w-full bg-[#f3f3f3]"
-          />
-        </div>
-        <div className="flex justify-between items-center">
-          <h1 className="font-primary text-lg md:text-3xl font-bold">
-            Most Recent Articles
+        <div className="flex flex-col md:flex-row md:justify-between space-y-2 md:space-y-0 md:items-center">
+          <h1 className="font-primary text-xl md:text-3xl font-bold">
+            Articles
           </h1>
-          <div>
-            <p className="text-sm md:text-xl text-secondary font-bold">
-              All Articles
-            </p>
+          <div className="max-w-lg w-full">
+            <input
+              type="search"
+              name="blogSearch"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              id=""
+              placeholder="Search Articles..."
+              className="px-4 py-2 bg-white text-primary w-full focus:border focus:outline-none  rounded-full shadow-nav"
+            />
           </div>
         </div>
         <hr className="mt-3 mb-6 border-primary border-opacity-10" />
