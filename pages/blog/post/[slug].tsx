@@ -70,7 +70,10 @@ const Post = ({ post }: Props) => {
           <div className="flex space-x-2 items-center justify-center mt-5">
             {post.categories && <p>Tags:</p>}
             {post.categories?.map((category) => (
-              <div className="border border-primary text-center rounded-full py-1 px-3 w-fit text-sm">
+              <div
+                className="border border-primary text-center rounded-full py-1 px-3 w-fit text-sm"
+                key={category.title}
+              >
                 <p>{category.title}</p>
               </div>
             ))}
