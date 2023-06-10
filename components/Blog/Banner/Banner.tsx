@@ -11,8 +11,8 @@ const Banner = ({ negHeight, noBg }: any) => {
     <div className="container z-10 relative">
       <div
         className={`${noBg === true ? "bg-none" : "bg-[#333333]"} ${
-          negHeight === false ? "-mt-0" : "-mt-20"
-        } px-5 py-10 md:p-20 flex flex-row justify-around`}
+          negHeight === false ? "-mt-0" : "-mt-10 md:-mt-20"
+        } px-5 py-5 md:p-20 flex flex-row justify-around rounded-xl`}
       >
         <Link href="/giving">
           <div className="flex flex-col items-center justify-between cursor-pointer hover:scale-105 transition-transform duration-200 ease-in-out">

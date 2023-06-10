@@ -66,7 +66,15 @@ const Post = ({ post }: Props) => {
           </div>
         </section>
         <PortableText value={post.body} components={RichTextComponents} />
-        <div className="mt-10 grid border-dashed border-t-[1px] border-primary border-opacity-25">
+        <div className="xs:space-y-4 mt-10 grid border-dashed border-t-[1px] border-primary border-opacity-25">
+          <div className="flex space-x-2 items-center justify-center mt-5">
+            {post.categories && <p>Tags:</p>}
+            {post.categories?.map((category) => (
+              <div className="border border-primary text-center rounded-full py-1 px-3 w-fit text-sm">
+                <p>{category.title}</p>
+              </div>
+            ))}
+          </div>
           <Banner negHeight={false} noBg={true} />
           <Share title={post.slug.current} />
         </div>
