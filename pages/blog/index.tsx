@@ -17,7 +17,7 @@ const blog = ({ preview }: any) => {
     <PreviewSuspense
       fallback={
         <div>
-          <p className="text-center text-lg">Loading preview...</p>
+          <p className="text-center text-lg">Loading Articles...</p>
         </div>
       }
     >
