@@ -70,11 +70,11 @@ function BlogList({ posts }: Props) {
                         layout="fill"
                       />
                     </div>
-                    <div className="p-4 md:p-6">
+                    <div className="p-3 md:p-5">
                       <h1 className="font-bold text-base md:text-xl">
                         {post.title}
                       </h1>
-                      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center space-y-1 lg:space-y-0">
+                      <div className="flex justify-between items-center">
                         <div className="flex space-x-2">
                           <div className="w-5 h-5 relative rounded-full">
                             <Image
