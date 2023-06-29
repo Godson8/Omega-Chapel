@@ -96,8 +96,6 @@ function BlogList({ posts }: Props) {
                             min Read
                           </p>
                           <div>
-                            <div></div>
-
                             <p className="text-xs">
                               {new Date(post._createdAt).toLocaleDateString(
                                 "en-US",
