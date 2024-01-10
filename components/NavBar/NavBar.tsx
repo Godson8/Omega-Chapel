@@ -135,6 +135,12 @@ const NavBar = () => {
                         </p>
                       </div>
                     </Link>
+                    <Link href="/our-partners">
+                      <div className="hover:bg-tertiary p-2 cursor-pointer">
+                        <h1 className="text-sm font-bold">Our Partners</h1>
+                        <p className="text-xs">Get to Know our patners</p>
+                      </div>
+                    </Link>
                     <Link href="/our-schedule">
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm font-bold">Our Schedule</h1>
@@ -308,6 +314,11 @@ const NavBar = () => {
                   <Link href="/our-leadership">
                     <p onClick={handleToggle} className="text-sm">
                       Our Leadership
+                    </p>
+                  </Link>
+                  <Link href="/our-partners">
+                    <p onClick={handleToggle} className="text-sm">
+                      Our Partners
                     </p>
                   </Link>
                   <Link href="/our-schedule">
