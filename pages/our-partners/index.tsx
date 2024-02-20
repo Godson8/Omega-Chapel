@@ -44,6 +44,43 @@ const partners = () => {
         </h1>
         <Tabs />
       </div>
+      <div>
+        <h1 className="md:text-6xl text-4xl font-bold font-primary">
+          What we do (in pictures)
+        </h1>
+        <div>
+          <div>
+            <h1 className="md:text-4xl text-2xl font-primary">
+              Salvation of Souls
+            </h1>
+          </div>
+          <div>
+            <h1 className="md:text-4xl text-2xl font-primary">
+              Charity and family support Sunday
+            </h1>
+          </div>
+          <div>
+            <h1 className="md:text-4xl text-2xl font-primary">
+              Medical outreach
+            </h1>
+          </div>
+          <div>
+            <h1 className="md:text-4xl text-2xl font-primary">
+              Community impact by primary education
+            </h1>
+          </div>
+          <div>
+            <h1 className="md:text-4xl text-2xl font-primary">
+              Music outreach
+            </h1>
+          </div>
+          <div>
+            <h1 className="md:text-4xl text-2xl font-primary">
+              Campus outreach
+            </h1>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
