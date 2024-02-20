@@ -63,11 +63,11 @@ const leadership = () => {
             name="Abayomi Oriretan"
             position="Assistant Pastor Omega Chapel, Canada"
           />
-          <Leaders
+          {/* <Leaders
             image="pastorJoel.png"
             name="Samson Joel"
             position="Assistant Pastor Omega Chapel, Ilogbo"
-          />
+          /> */}
           <Leaders
             image="pastorJames.png"
             name="King James Olusesan"
@@ -123,11 +123,11 @@ const leadership = () => {
               name="Bukola Adebanjo"
               position="Childrens Coordinator Omega Chapel, Ota"
             />
-            <Leaders
+            {/* <Leaders
               image="adebowaleJoel.png"
               name="Adebowale Joel"
               position="Choir leader Omega Chapel, Ilogbo"
-            />
+            /> */}
           </div>
         </div>
       </div>
