@@ -95,7 +95,7 @@ const Home = ({ data }: any) => {
       <Newsletter />
       <FollowUs />
 
-      <Modal
+      {/* <Modal
         open={openModal}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
@@ -103,7 +103,7 @@ const Home = ({ data }: any) => {
       >
         <Box
           sx={{
-            ...style,
+            ...styles,
             width: { xs: 300, sm: 400, md: 600, lg: 800, xl: 1000 }, // Adjust the widths as needed
             mx: "auto", // Center the modal horizontally
             display: "flex",
@@ -140,7 +140,7 @@ const Home = ({ data }: any) => {
             </a>
           </h1>
         </Box>
-      </Modal>
+      </Modal> */}
     </div>
   );
 };
