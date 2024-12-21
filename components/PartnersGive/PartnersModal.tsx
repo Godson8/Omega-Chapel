@@ -1,4 +1,4 @@
-export const PartnersModal = ({ children, onClose }: any) => {
+const PartnersModal = ({ children, onClose }: any) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
       <div className="bg-white w-full max-w-md rounded-lg shadow-lg p-6 relative">
@@ -13,3 +13,5 @@ export const PartnersModal = ({ children, onClose }: any) => {
     </div>
   );
 };
+
+export default PartnersModal;

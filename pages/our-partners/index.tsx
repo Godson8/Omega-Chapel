@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../components/Button/Button";
@@ -6,8 +7,23 @@ import Tabs from "../../components/Tabs/Tabs";
 import WhatWeDo from "../../components/WhatWeDo/WhatWeDo";
 import PartnersForm from "../../components/PartnersForm/PartnersForm";
 import { useState } from "react";
-import PartnersGive from "../../components/PartnersGive/PartnersGive";
-import { PartnersModal } from "../../components/PartnersGive/PartnersModal";
+// import PartnersGive from "../../components/PartnersGive/PartnersGive";
+// import { PartnersModal } from "../../components/PartnersGive/PartnersModal";
+
+const PartnersModal = dynamic(
+  () =>
+    import("../../components/PartnersGive/PartnersModal").then(
+      (mod) => mod.default
+    ),
+  { ssr: false }
+);
+const PartnersGive = dynamic(
+  () =>
+    import("../../components/PartnersGive/PartnersGive").then(
+      (mod) => mod.default
+    ),
+  { ssr: false }
+);
 
 const Partners = () => {
   const [isModalOpen, setModalOpen] = useState(false);
