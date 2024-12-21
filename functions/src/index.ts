@@ -34,7 +34,7 @@ const SPREADSHEET_ID = "1Q5Vs3z9XQI08pykhcjKj28SsVtMcJLIs556CePeENds";
 // JOIN US THIS SUNDAY FORM
 export const syncCollection1 = functions.firestore.onDocumentWritten(
   "Join us this Sunday/{docId}",
-  async (event) => {
+  async (event: any) => {
     const afterSnap = event.data?.after;
 
     if (!afterSnap) {
@@ -107,7 +107,7 @@ export const syncCollection1 = functions.firestore.onDocumentWritten(
 // PARTNERS FORM
 export const syncCollectionPartners = functions.firestore.onDocumentWritten(
   "Partners/{docId}",
-  async (event) => {
+  async (event: any) => {
     const afterSnap = event.data?.after;
 
     if (!afterSnap) {
