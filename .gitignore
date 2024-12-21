@@ -36,3 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 omega.zip*
+
+functions/omega-chapel-website-responses.json
