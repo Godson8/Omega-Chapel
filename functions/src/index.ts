@@ -1,4 +1,4 @@
-import * as functions from "firebase-functions/v2";
+import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import * as nodemailer from "nodemailer";
 import { google } from "googleapis";
