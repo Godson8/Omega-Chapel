@@ -171,7 +171,7 @@ const NavBar = () => {
                       !showMedia && "hidden"
                     }  grid grid-cols-2 gap-y-1 gap-x-2 `}
                   >
-                    <Link href="/sermons">
+                    <Link href="http://www.youtube.com/@omegachapel" passHref>
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm font-bold">Sermons</h1>
                         <p className="text-xs">
@@ -179,7 +179,10 @@ const NavBar = () => {
                         </p>
                       </div>
                     </Link>
-                    <Link href="/music">
+                    <Link
+                      href="https://www.youtube.com/playlist?list=PLiJLD9dPrcur6QNuif1oOBb6VuNwTMmuN"
+                      passHref
+                    >
                       <div className="hover:bg-tertiary p-2 cursor-pointer">
                         <h1 className="text-sm font-bold">Music</h1>
                         <p className="text-xs">
@@ -287,15 +290,19 @@ const NavBar = () => {
                 <Link href="/locations">Locations</Link>
               </li>
               <li className="hover:text-secondary transition-all">
+                <Link href="/our-partners">Partnership</Link>
+              </li>
+              <li className="hover:text-secondary transition-all">
                 <Link href="/contact">Contact</Link>
               </li>
               <li className="text-secondary font-bold hover:text-secondary transition-colors">
                 <Link href="/giving">Giving</Link>
               </li>
             </ul>
+            {/* MOBILE */}
             <div
               className={`container divide-y-[0.5px] divide-primary divide-opacity-20 divide-dashed pb-8 md:hidden h-full ${
-                toggle && "mb-10"
+                toggle ? "block mb-10" : "hidden"
               }`}
             >
               <div className="py-4 space-y-5">
@@ -332,12 +339,15 @@ const NavBar = () => {
               <div className="py-4 space-y-5">
                 <h1 className="font-bold text-sm">MEDIA</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/sermons">
+                  <Link href="http://www.youtube.com/@omegachapel" passHref>
                     <p onClick={handleToggle} className="text-sm">
                       Sermons
                     </p>
                   </Link>
-                  <Link href="/music">
+                  <Link
+                    href="https://www.youtube.com/playlist?list=PLiJLD9dPrcur6QNuif1oOBb6VuNwTMmuN"
+                    passHref
+                  >
                     <p onClick={handleToggle} className="text-sm">
                       Music
                     </p>
@@ -399,6 +409,16 @@ const NavBar = () => {
                   <Link href="/locations">
                     <p onClick={handleToggle} className="text-sm">
                       Locations
+                    </p>
+                  </Link>
+                </div>
+              </div>
+              <div className="py-4 space-y-5">
+                <h1 className="font-bold text-sm">PARTNERSHIP</h1>
+                <div className="grid grid-cols-2 gap-4 gap-y-6">
+                  <Link href="/our-partnership">
+                    <p onClick={handleToggle} className="text-sm">
+                      Partnership
                     </p>
                   </Link>
                 </div>

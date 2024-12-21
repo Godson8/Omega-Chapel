@@ -1,0 +1,41 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google-cloud/firestore": "^7.11.0",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "firebase-admin": "^13.0.1",
+    "firebase-functions": "^6.1.2",
+    "googleapis": "^144.0.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.16",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-transition-group": "^4.4.5"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.17",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^5.7.2"
+  },
+  "private": true
+}

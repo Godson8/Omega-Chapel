@@ -20,16 +20,15 @@ import Modal from "@mui/material/Modal";
 import { useEffect, useState } from "react";
 import { IoIosCloseCircle } from "react-icons/io";
 
-const endPoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.PLAYLIST_ID}&key=${process.env.YOUTUBE_KEY}`;
+const endPoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.NEXT_PUBLIC_PLAYLIST_ID}&key=${process.env.NEXT_PUBLIC_YOUTUBE_KEY}`;
 
 const Home = ({ data }: any) => {
-  console.log(data);
-  const latestSermonImage = data.items[0].snippet.thumbnails.maxres
-    ? data.items[0].snippet.thumbnails.maxres.url
-    : data.items[0].snippet.thumbnails.high.url;
-  const latestSermonVideoId = data.items[0].snippet.resourceId.videoId;
+  // const latestSermonImage = data.items[0].snippet.thumbnails.maxres
+  //   ? data.items[0].snippet.thumbnails.maxres.url
+  //   : data.items[0].snippet.thumbnails.high.url;
+  // const latestSermonVideoId = data.items[0].snippet.resourceId.videoId;
 
-  const latestSermonTitle = data.items[0].snippet.title;
+  // const latestSermonTitle = data.items[0].snippet.title;
 
   const [openModal, setOpenModal] = useState(false);
 
@@ -55,7 +54,7 @@ const Home = ({ data }: any) => {
       {/* <Image src="/noise.png" layout="fill" alt="bg" className="object-cover" /> */}
       <Hero />
       {/* Latest Sermon */}
-      <div className="container mt-16 md:mt-[100px] rounded-xl ">
+      {/* <div className="container mt-16 md:mt-[100px] rounded-xl ">
         <div className="relative h-[550px] rounded-xl shadow-nav">
           <Image
             src={latestSermonImage}
@@ -85,7 +84,7 @@ const Home = ({ data }: any) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Latest Sermon */}
       <Locations />
       <JoinUs
@@ -157,51 +156,3 @@ export const getServerSideProps = async () => {
     },
   };
 };
-
-const style = {
-  position: "absolute" as "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
-// export function BasicModal() {
-//   const [open, setOpen] = useState(false);
-//   const handleOpen = () => setOpen(true);
-//   const handleClose = () => setOpen(false);
-
-//   useEffect(() => {
-//     // Open the modal on component mount
-//     handleOpen();
-
-//     // Cleanup function to close the modal on component unmount
-//     return () => handleClose();
-//   }, []); // Empty dependency array ensures this effect runs once on mount
-
-//   return (
-//     <div>
-//       {/* Remove the button as the modal will be opened on page load */}
-//       {/* <Button onClick={handleOpen}>Open modal</Button> */}
-//       <Modal
-//         open={open}
-//         onClose={handleClose}
-//         aria-labelledby="modal-modal-title"
-//         aria-describedby="modal-modal-description"
-//       >
-//         <Box sx={style}>
-//           <Typography id="modal-modal-title" variant="h6" component="h2">
-//             Text in a modal
-//           </Typography>
-//           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-//             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-//           </Typography>
-//         </Box>
-//       </Modal>
-//     </div>
-//   );
-// }

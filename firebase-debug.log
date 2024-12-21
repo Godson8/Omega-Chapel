@@ -1,0 +1,67 @@
+[debug] [2024-12-09T22:03:16.179Z] ----------------------------------------------------------------------
+[debug] [2024-12-09T22:03:16.181Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
+[debug] [2024-12-09T22:03:16.182Z] CLI Version:   11.19.0
+[debug] [2024-12-09T22:03:16.182Z] Platform:      win32
+[debug] [2024-12-09T22:03:16.182Z] Node Version:  v18.20.4
+[debug] [2024-12-09T22:03:16.182Z] Time:          Mon Dec 09 2024 15:03:16 GMT-0700 (Mountain Standard Time)
+[debug] [2024-12-09T22:03:16.182Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-09T22:03:16.260Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-09T22:03:16.260Z] > authorizing via signed-in user (omegachapel6@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\hp\Documents\omega
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-12-09T22:04:00.741Z] Using project from CLI flag: omega-chapel-website
+[debug] [2024-12-09T22:04:00.747Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/omega-chapel-website [none]
+[debug] [2024-12-09T22:04:01.182Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/omega-chapel-website 200
+[debug] [2024-12-09T22:04:01.183Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/omega-chapel-website {"projectId":"omega-chapel-website","projectNumber":"129958972998","displayName":"Omega Chapel Website","name":"projects/omega-chapel-website","resources":{"hostingSite":"omega-chapel-website","storageBucket":"omega-chapel-website.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_8ce2170b-0e2a-44aa-9eb0-ae7ce2b6a270"}
+[info] i  Using project omega-chapel-website (Omega Chapel Website) 
+[info] 
+=== Functions Setup
+[debug] [2024-12-09T22:04:01.193Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-09T22:04:01.193Z] > authorizing via signed-in user (omegachapel6@gmail.com)
+[debug] [2024-12-09T22:04:01.194Z] [iam] checking project omega-chapel-website for permissions ["firebase.projects.get"]
+[debug] [2024-12-09T22:04:01.194Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/omega-chapel-website:testIamPermissions [none]
+[debug] [2024-12-09T22:04:01.194Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/omega-chapel-website:testIamPermissions x-goog-quota-user=projects/omega-chapel-website
+[debug] [2024-12-09T22:04:01.194Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/omega-chapel-website:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-09T22:04:01.473Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/omega-chapel-website:testIamPermissions 200
+[debug] [2024-12-09T22:04:01.473Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/omega-chapel-website:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-09T22:04:01.474Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/omega-chapel-website/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-12-09T22:04:01.474Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/omega-chapel-website/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/omega-chapel-website
+[debug] [2024-12-09T22:04:01.476Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/omega-chapel-website/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-12-09T22:04:01.476Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/omega-chapel-website/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/omega-chapel-website
+[debug] [2024-12-09T22:04:01.926Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/omega-chapel-website/services/runtimeconfig.googleapis.com 200
+[debug] [2024-12-09T22:04:01.927Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/omega-chapel-website/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-12-09T22:04:02.116Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/omega-chapel-website/services/cloudfunctions.googleapis.com 200
+[debug] [2024-12-09T22:04:02.117Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/omega-chapel-website/services/cloudfunctions.googleapis.com [omitted]
+[info] 
+Detected existing codebase(s): default
+
+[info] 
+Overwriting codebase default...
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/tsconfig.json 
+[info] +  Wrote functions/tsconfig.dev.json 
+[info] +  Wrote functions/src/index.ts 
+[info] +  Wrote functions/.gitignore 

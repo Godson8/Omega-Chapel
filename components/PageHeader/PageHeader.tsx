@@ -5,14 +5,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import { GoPrimitiveDot } from "react-icons/go";
+import { GoDotFill } from "react-icons/go";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 
 interface props {
-  title: string;
-  subTitle1: string;
-  subTitle2: string;
+  title: ReactNode;
+  subTitle1?: string;
+  subTitle2?: string;
   image?: string;
 }
 
@@ -49,10 +49,10 @@ const PageHeader = ({ title, subTitle1, subTitle2, image }: props) => {
         />
       </div>
       <div className="text-xs font-bold absolute top-4 left-4 md:top-8  md:left-8 flex items-center space-x-2 text-secondary">
-        <p>{subTitle1}</p> <GoPrimitiveDot color="#3C64B1" /> <p>{subTitle2}</p>
+        <p>{subTitle1}</p> <GoDotFill color="#3C64B1" /> <p>{subTitle2}</p>
       </div>
       <div
-        className="w-full absolute top-[45%] left-1/2 -translate-x-1/2 flex-col items-center space-y-4 md:space-y-14"
+        className="w-full absolute top-[30%] left-1/2 -translate-x-1/2 flex-col items-center space-y-4 md:space-y-14"
         ref={backgroundRef}
       >
         <h1 className="text-[24px] md:text-[60px] font-black text-center">

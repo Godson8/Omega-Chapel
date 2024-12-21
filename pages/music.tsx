@@ -146,11 +146,19 @@ const music = ({ data }: any) => {
 export default music;
 
 export const getServerSideProps = async () => {
-  const res = await fetch(endPoint);
-  const data = await res.json();
+  // const res = await fetch(endPoint);
+  // const data = await res.json();
+  // return {
+  //   props: {
+  //     data,
+  //   },
+  // };
+
   return {
-    props: {
-      data,
+    redirect: {
+      destination:
+        "https://www.youtube.com/playlist?list=PLiJLD9dPrcur6QNuif1oOBb6VuNwTMmuN", // YouTube channel link
+      permanent: false, // Temporary redirect
     },
   };
 };

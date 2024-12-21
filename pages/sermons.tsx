@@ -139,11 +139,19 @@ const sermons = ({ data }: any) => {
 export default sermons;
 
 export const getServerSideProps = async () => {
-  const res = await fetch(endPoint);
-  const data = await res.json();
+  // const res = await fetch(endPoint);
+  // const data = await res.json();
+  // return {
+  //   props: {
+  //     data,
+  //   },
+  // };
+
+  // Redirect to the YouTube channel
   return {
-    props: {
-      data,
+    redirect: {
+      destination: "http://www.youtube.com/@omegachapel", // YouTube channel link
+      permanent: false, // Temporary redirect
     },
   };
 };
