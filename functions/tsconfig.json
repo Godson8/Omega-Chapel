@@ -1,16 +1,19 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "node",       // Ensures proper module resolution
+    "esModuleInterop": true,          // Allows default imports for non-ES modules
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "outDir": "lib",
     "sourceMap": true,
     "strict": true,
     "target": "es2017",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
   "compileOnSave": true,
   "include": [
     "src"
   ]
 }
+
