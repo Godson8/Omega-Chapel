@@ -41,6 +41,7 @@
     "react-router-dom": "^7.1.0",
     "sanity": "^3.11.1",
     "sanity-plugin-iframe-pane": "^2.3.1",
+    "styled-components": "^6.1.13",
     "swiper": "^8.4.2"
   },
   "devDependencies": {
