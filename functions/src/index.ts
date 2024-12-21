@@ -6,6 +6,8 @@ import * as path from "path";
 
 admin.initializeApp();
 
+// test
+
 // Gmail Transporter (for email notifications)
 const transporter = nodemailer.createTransport({
   service: "gmail",

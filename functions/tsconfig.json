@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "moduleResolution": "node",       // Ensures proper module resolution
-    "esModuleInterop": true,          // Allows default imports for non-ES modules
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "outDir": "lib",
@@ -16,4 +16,3 @@
     "src"
   ]
 }
-
