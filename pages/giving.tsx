@@ -13,7 +13,7 @@ import dateFormat from "dateformat";
 import { FaCcMastercard, FaCcVisa } from "react-icons/fa";
 import { PaystackConsumer } from "react-paystack";
 import { PaystackProps } from "react-paystack/dist/types";
-import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
+// import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 import Router from "next/router";
 import summary from "./summary";
 import Head from "next/head";
