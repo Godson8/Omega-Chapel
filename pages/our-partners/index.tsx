@@ -9,7 +9,7 @@ import { useState } from "react";
 import PartnersGive from "../../components/PartnersGive/PartnersGive";
 import { PartnersModal } from "../../components/PartnersGive/PartnersModal";
 
-const partners = () => {
+const Partners = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   return (
     <div className="container space-y-11">
@@ -118,21 +118,22 @@ const partners = () => {
             <li>
               Only those who love God are expected to help the spread:
               <span className="block pl-4 border-l-4 border-[#83d4e8]">
-                “Because that for his name's sake they went forth, taking
+                “Because that for his name&apos;s sake they went forth, taking
                 nothing of the Gentiles. We therefore ought to receive such,
                 that we might be fellowhelpers to the truth.” — 3 John 1:7-8
               </span>
             </li>
             <li>
-              We saw partnership giving in Jesus’ ministry:
+              We saw partnership giving in Jesus&apos; ministry:
               <span className="block pl-4 border-l-4 border-[#83d4e8]">
                 “And it came to pass afterward, that he went throughout every
                 city and village, preaching and shewing the glad tidings of the
                 kingdom of God: and the twelve were with him, And certain women,
                 which had been healed of evil spirits and infirmities, Mary
                 called Magdalene, out of whom went seven devils, And Joanna the
-                wife of Chuza Herod's steward, and Susanna, and many others,
-                which ministered unto him of their substance.” — Luke 8:1-3
+                wife of Chuza Herod&apos;s steward, and Susanna, and many
+                others, which ministered unto him of their substance.” — Luke
+                8:1-3
               </span>
             </li>
             <li>
@@ -175,10 +176,10 @@ const partners = () => {
                 “And Jesus answered and said, Verily I say unto you, There is no
                 man that hath left house, or brethren, or sisters, or father, or
                 mother, or wife, or children, or lands, for my sake, and the
-                gospel's, But he shall receive an hundredfold now in this time,
-                houses, and brethren, and sisters, and mothers, and children,
-                and lands, with persecutions; and in the world to come eternal
-                life.” — Mark 10:29-30
+                gospel&apos;s, But he shall receive an hundredfold now in this
+                time, houses, and brethren, and sisters, and mothers, and
+                children, and lands, with persecutions; and in the world to come
+                eternal life.” — Mark 10:29-30
               </span>
             </li>
             <li>
@@ -196,9 +197,9 @@ const partners = () => {
                 have you in my heart; inasmuch as both in my bonds, and in the
                 defence and confirmation of the gospel, ye all are partakers of
                 my grace.” — Philippians 1:7 “He that receiveth a prophet in the
-                name of a prophet shall receive a prophet's reward; and he that
-                receiveth a righteous man in the name of a righteous man shall
-                receive a righteous man's reward.” — Matthew 10:41
+                name of a prophet shall receive a prophet&apos;s reward; and he
+                that receiveth a righteous man in the name of a righteous man
+                shall receive a righteous man&apos;s reward.” — Matthew 10:41
               </span>
             </li>
             <li>
@@ -294,4 +295,4 @@ const partners = () => {
   );
 };
 
-export default partners;
+export default Partners;

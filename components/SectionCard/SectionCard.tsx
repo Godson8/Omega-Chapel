@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const SectionCard = ({ title, images, altText }: any) => {
   return (
     <div className="w-full mb-4">
@@ -8,7 +10,7 @@ const SectionCard = ({ title, images, altText }: any) => {
             key={index}
             className="relative group overflow-hidden rounded-lg"
           >
-            <img
+            <Image
               src={image}
               alt={altText}
               className="w-full h-56 object-cover object-top transition-transform duration-300 ease-in-out group-hover:scale-105"
