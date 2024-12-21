@@ -15,7 +15,7 @@ interface Props {
   currency: string;
   amount: number;
 }
-import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
+// import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 const Summary = () => {
   const Router = useRouter();
 
@@ -74,7 +74,7 @@ const Summary = () => {
   // console.log(config);
   // console.log(props);
 
-  const handleFlutterPayment = useFlutterwave(config);
+  // const handleFlutterPayment = useFlutterwave(config);
 
   return (
     <div className="container">
@@ -103,7 +103,7 @@ const Summary = () => {
             </TableBody>
           </Table>
         </TableContainer>
-        <button
+        {/* <button
           onClick={() => {
             handleFlutterPayment({
               callback: (response) => {
@@ -117,7 +117,7 @@ const Summary = () => {
           type="submit"
         >
           Proceed to Give
-        </button>
+        </button> */}
       </div>
     </div>
   );
