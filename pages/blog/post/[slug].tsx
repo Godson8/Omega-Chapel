@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import Image from "next/image";
 import { client } from "../../../sanity/lib/client";
 import urlFor from "../../../sanity/lib/UrlFor";
-import { Post } from "../../../typins";
+import type { Post } from "../../../typins";
 import { PortableText } from "@portabletext/react";
 import RichTextComponents from "../../../components/Blog/RichTextComponents/RichTextComponents";
 import Banner from "../../../components/Blog/Banner/Banner";
