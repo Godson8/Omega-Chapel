@@ -55,7 +55,7 @@ const Partners = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 md:mt-[100px]">
         <div className="relative w-full  h-[360px] md:h-[505px] rounded-lg overflow-hidden bg-[#ffecec]">
           <Image
-            src="/founders/14.JPG"
+            src="/founders/14.jpg"
             layout="fill"
             className="object-cover object-top hover:scale-105 transition-transform duration-200 ease-in-out"
             alt="founders"
