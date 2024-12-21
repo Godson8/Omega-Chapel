@@ -6,7 +6,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCuOIgAM8g9Tl4kn7CIAQfaCYtVgp-s-do",
+  apiKey: process.env.NEXT_APP_FIREBASE_API_KEY,
   authDomain: "omega-chapel-website.firebaseapp.com",
   projectId: "omega-chapel-website",
   storageBucket: "omega-chapel-website.appspot.com",
