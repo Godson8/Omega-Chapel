@@ -296,7 +296,8 @@ const NavBar = () => {
                 <Link href="/contact">Contact</Link>
               </li>
               <li className="text-secondary font-bold hover:text-secondary transition-colors">
-                <Link href="/giving">Giving</Link>
+                {/* <Link href="/giving">Giving</Link> */}
+                <Link href="/our-partners">Giving</Link>
               </li>
             </ul>
             {/* MOBILE */}
@@ -416,7 +417,7 @@ const NavBar = () => {
               <div className="py-4 space-y-5">
                 <h1 className="font-bold text-sm">PARTNERSHIP</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/our-partnership">
+                  <Link href="/our-partners">
                     <p onClick={handleToggle} className="text-sm">
                       Partnership
                     </p>
@@ -438,7 +439,8 @@ const NavBar = () => {
               <div className="py-4 space-y-5">
                 <h1 className="font-bold text-sm">GIVING</h1>
                 <div className="grid grid-cols-2 gap-4 gap-y-6">
-                  <Link href="/giving">
+                  {/* <Link href="/giving"> */}
+                  <Link href="/our-partners">
                     <p onClick={handleToggle} className="text-sm">
                       Giving
                     </p>

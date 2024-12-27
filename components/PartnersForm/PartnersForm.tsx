@@ -77,7 +77,7 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
       <div className="flex flex-col items-center space-y-20">
         <div className="space-y-4">
           <h1 className="text-[32px] font-bold text-center">{title}</h1>
-          <p className="max-w-52 text-center">{detail}</p>
+          <p className="text-center">{detail}</p>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}

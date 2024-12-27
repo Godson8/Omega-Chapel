@@ -6,17 +6,10 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import Tabs from "../../components/Tabs/Tabs";
 import WhatWeDo from "../../components/WhatWeDo/WhatWeDo";
 import PartnersForm from "../../components/PartnersForm/PartnersForm";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // import PartnersGive from "../../components/PartnersGive/PartnersGive";
 // import { PartnersModal } from "../../components/PartnersGive/PartnersModal";
 
-const PartnersModal = dynamic(
-  () =>
-    import("../../components/PartnersGive/PartnersModal").then(
-      (mod) => mod.default
-    ),
-  { ssr: false }
-);
 const PartnersGive = dynamic(
   () =>
     import("../../components/PartnersGive/PartnersGive").then(
@@ -25,7 +18,21 @@ const PartnersGive = dynamic(
   { ssr: false }
 );
 
+// Dynamically import PartnersGive to ensure it's rendered only on the client side
+// const PartnersGive = dynamic(() => import("../../components/PartnersGive/PartnersGive"), { ssr: false });
+
 const Partners = () => {
+  const giveSectionRef = useRef<HTMLDivElement | null>(null); // Ref for "Give" section
+
+  // Function to scroll to the "Give" section
+  const scrollToGiveSection = () => {
+    if (giveSectionRef.current) {
+      giveSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   const [isModalOpen, setModalOpen] = useState(false);
   return (
     <div className="container space-y-11">
@@ -39,7 +46,7 @@ const Partners = () => {
             </span>
             <div>
               <button
-                onClick={() => setModalOpen(true)}
+                onClick={scrollToGiveSection}
                 className="bg-secondary text-white text-xs md:text-sm px-2 py-1 rounded-lg hover:bg-blue-600"
               >
                 Give Now
@@ -278,7 +285,7 @@ const Partners = () => {
         title="Want to be a Partner?"
         detail="Please fill the form below. We would love to say hello."
       />
-      <div className="bg-[#c9f0fa] p-8 rounded-xl md:col-span-2">
+      <div className="  p-8 rounded-xl md:col-span-2">
         <h1 className="text-2xl font-black">
           Join Hands in the Vision of Transformation
         </h1>
@@ -292,21 +299,18 @@ const Partners = () => {
           God is glorified. Your partnership helps us continue this impactful
           mission.
         </p>
-        <div className="flex justify-center mt-8">
+        {/* <div className="flex justify-center mt-8">
           <button
             onClick={() => setModalOpen(true)}
             className="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-blue-600"
           >
             Give Now
           </button>
+        </div> */}
+        <div ref={giveSectionRef}>
+          <PartnersGive />
         </div>
       </div>
-
-      {isModalOpen && (
-        <PartnersModal onClose={() => setModalOpen(false)}>
-          <PartnersGive onClose={() => setModalOpen(false)} />
-        </PartnersModal>
-      )}
     </div>
   );
 };

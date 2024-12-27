@@ -151,7 +151,15 @@ export const syncCollectionPartners = functions.firestore.onDocumentWritten(
       // Send email notification
       const mailOptions = {
         from: "omegachapel6@gmail.com",
-        to: ["godsonoladipupo@yahoo.com", "godsonoladipupo6@gmail.com"], // Add multiple recipients if needed
+        to: [
+          "godsonoladipupo@yahoo.com",
+          "godsonoladipupo6@gmail.com",
+          "piusoladipupo@yahoo.com",
+          "funkeoladipupo@yahoo.com",
+          "oladipupodavid18@gmail.com",
+          "kemisolajesu03@yahoo.com",
+          "olubodunlizzy@gmail.com",
+        ], // Add multiple recipients if needed
         subject: "New 'Partners' Form Submission",
         html: `
           <p><b>New PARTNERSHIP Form submission received:</b></p>
