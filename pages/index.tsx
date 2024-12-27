@@ -49,6 +49,10 @@ const Home = ({ data }: any) => {
       <Head>
         <title>Omega Chapel - Welcome Home -</title>
         <meta name="description" content="Omega Chapel - Welcome Home -" />
+        <meta
+          name="google-site-verification"
+          content="SV8zXFK7Ps0WsGnvziC5T3jflpFq84u6VVJ0X_UwXLQ"
+        />
         <link rel="icon" href="/logo.png" />
       </Head>
       {/* <Image src="/noise.png" layout="fill" alt="bg" className="object-cover" /> */}
