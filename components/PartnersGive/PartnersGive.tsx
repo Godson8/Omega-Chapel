@@ -266,6 +266,10 @@ const PartnersGive = () => {
                           <span className="font-bold">Swift Code: </span>
                           GTBINGLA
                         </p>
+                        <p>
+                          <span className="font-bold">Sort Code:</span>{" "}
+                          058152890
+                        </p>
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -291,6 +295,10 @@ const PartnersGive = () => {
                         <p>
                           <span className="font-bold">Account Number:</span>{" "}
                           3000149714
+                        </p>
+                        <p>
+                          <span className="font-bold">Swift Code:</span>{" "}
+                          GTBINGLA
                         </p>
                         <p>
                           <span className="font-bold">Sort Code:</span>{" "}
@@ -325,6 +333,10 @@ const PartnersGive = () => {
                         <p>
                           <span className="font-bold">Swift Code:</span>{" "}
                           GTBINGLA
+                        </p>
+                        <p>
+                          <span className="font-bold">Sort Code:</span>{" "}
+                          058152890
                         </p>
                       </Typography>
                     </AccordionDetails>
