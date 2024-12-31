@@ -59,9 +59,13 @@ const PartnersGive = () => {
   };
 
   const [value, setValueTab] = useState("1");
+  const [value2, setValue2Tab] = useState("1");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValueTab(newValue);
+  };
+  const handleChange2 = (event: React.SyntheticEvent, newValue: string) => {
+    setValue2Tab(newValue);
   };
 
   // Function to handle input for amount and ensure it doesn't go below 1
@@ -86,13 +90,16 @@ const PartnersGive = () => {
           <h1 className="text-2xl font-bold">Give Now</h1>
           <p className="max-w-md text-center">
             Choose a payment method that works best for you. We support payments
-            in Naira, PayPal, and more.
+            in Naira and more.
           </p>
         </div>
         <div className="flex flex-col items-start">
           <TabContext value={value}>
             <div className="space-y-8 flex-row self-center">
-              <TabList onChange={handleChange} aria-label="Payment Methods">
+              <TabList
+                onChange={handleChange}
+                aria-label="POMI Payment Methods"
+              >
                 <Tab
                   icon={<FaCreditCard size={24} />} // Increase icon size
                   label="Pay with Naira"
@@ -100,15 +107,9 @@ const PartnersGive = () => {
                   className="flex items-center space-x-2" // Align text and icon
                 />
                 <Tab
-                  icon={<FaPaypal size={24} />} // Increase icon size
-                  label="PayPal"
-                  value="2"
-                  className="flex items-center space-x-2" // Align text and icon
-                />
-                <Tab
                   icon={<FaMoneyBillAlt size={24} />} // Increase icon size
                   label="Others"
-                  value="3"
+                  value="2"
                   className="flex items-center space-x-2" // Align text and icon
                 />
               </TabList>
@@ -228,17 +229,6 @@ const PartnersGive = () => {
                 </div>
               </TabPanel>
               <TabPanel value="2">
-                <div className="flex flex-col items-center space-y-7">
-                  <p className="text-center">
-                    Use PayPal to make secure payments in your preferred
-                    currency.
-                  </p>
-                  <Link href={"https://www.paypal.me/Piusolad"} passHref>
-                    <Button title="Proceed with PayPal" outline />
-                  </Link>
-                </div>
-              </TabPanel>
-              <TabPanel value="3">
                 <div className="mt-8 space-y-4">
                   <Accordion
                     expanded={expanded === "panel1"}
@@ -341,36 +331,67 @@ const PartnersGive = () => {
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
+                </div>
+              </TabPanel>
+            </div>
+          </TabContext>
+        </div>
+        <div className="flex flex-col items-center space-y-4">
+          <h1 className="text-2xl font-bold mt-16">Give to Rev. Pius</h1>
+          <p className="max-w-md text-center">Give with ease!</p>
+        </div>
+        <div className="flex flex-col items-start">
+          <TabContext value={value2}>
+            <div className="space-y-8 flex-row self-center">
+              <TabList onChange={handleChange2} aria-label="Payment Methods">
+                <Tab
+                  icon={<FaCreditCard size={24} />} // Increase icon size
+                  label="Paypal"
+                  value="1"
+                  className="flex items-center space-x-2" // Align text and icon
+                />
+                <Tab
+                  icon={<FaMoneyBillAlt size={24} />} // Increase icon size
+                  label="Others"
+                  value="2"
+                  className="flex items-center space-x-2" // Align text and icon
+                />
+              </TabList>
 
+              <TabPanel value="1">
+                <div className="flex flex-col items-center space-y-7">
+                  <p className="text-center">
+                    Use PayPal to make secure payments in your preferred
+                    currency.
+                  </p>
+                  <Link href={"https://www.paypal.me/Piusolad"} passHref>
+                    <Button title="Proceed with PayPal" outline />
+                  </Link>
+                </div>
+              </TabPanel>
+              <TabPanel value="2">
+                <div className="mt-8 space-y-4">
                   <Accordion
                     expanded={expanded === "panel4"}
                     onChange={handleAccordionChange("panel4")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel4-content"
-                      id="panel4-header"
+                      aria-controls="panel5-content"
+                      id="panel5-header"
                     >
                       <Typography className="font-bold">
-                        Rev. Pius - Dollar Account
+                        Naira Account
                       </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>
                         <p>
-                          <span className="font-bold">Bank:</span> Capital One
+                          <span className="font-bold">Bank:</span> GTBank
                         </p>
                         <p>
                           <span className="font-bold">Account Number:</span>{" "}
-                          36320860303
-                        </p>
-                        <p>
-                          <span className="font-bold">Routing Number:</span>{" "}
-                          031176110
-                        </p>
-                        <p>
-                          <span className="font-bold">Email:</span>{" "}
-                          piusoladipupo@yahoo.com
+                          0016431859
                         </p>
                       </Typography>
                     </AccordionDetails>
@@ -382,21 +403,29 @@ const PartnersGive = () => {
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel5-content"
-                      id="panel5-header"
+                      aria-controls="panel1-content"
+                      id="panel1-header"
                     >
                       <Typography className="font-bold">
-                        Rev. Pius - Naira Account
+                        Dollar Account (USD)
                       </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Typography>
+                      <Typography className="space-y-2 text-primary">
                         <p>
-                          <span className="font-bold">Bank:</span> GTBank
+                          <span className="font-bold">Bank: </span>GTBank
                         </p>
                         <p>
-                          <span className="font-bold">Account Number:</span>{" "}
-                          0016431859
+                          <span className="font-bold">Account Number: </span>
+                          0016431866
+                        </p>
+                        <p>
+                          <span className="font-bold">Swift Code: </span>
+                          GTBINGLA
+                        </p>
+                        <p>
+                          <span className="font-bold">Sort Code:</span>{" "}
+                          021000089
                         </p>
                       </Typography>
                     </AccordionDetails>
