@@ -151,12 +151,12 @@ const Home = ({ data }: any) => {
 
 export default Home;
 
-export const getServerSideProps = async () => {
-  const res = await fetch(endPoint);
-  const data = await res.json();
-  return {
-    props: {
-      data,
-    },
-  };
-};
+// export const getServerSideProps = async () => {
+//   const res = await fetch(endPoint);
+//   const data = await res.json();
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// };

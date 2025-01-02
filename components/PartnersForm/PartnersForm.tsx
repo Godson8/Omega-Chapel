@@ -12,10 +12,12 @@ import { AlertTitle } from "@mui/material";
 import dateFormat from "dateformat";
 
 interface FormValues {
-  fullName: string;
+  firstName: string;
+  lastName: string;
   phoneNumber: string;
   gender: string;
   email: string;
+  homeAddress: string;
   whoReferredYou: string;
 }
 
@@ -57,10 +59,12 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
   const onSubmit = (data: any) => {
     reset();
     addDoc(databaseRef, {
-      "Full Name": data.fullName,
+      "First Name": data.firstName,
+      "Last Name": data.lastName,
+      Email: data.email,
       "Phone Number": data.phoneNumber,
       Gender: data.gender,
-      Email: data.email,
+      "Home Address": data.homeAddress,
       "Who referred you": data.whoReferredYou,
       date: dateFormat(new Date()),
     })
@@ -85,18 +89,26 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
         >
           <div className="flex flex-col space-y-[6px]">
             <p>Full Name*</p>
-            <input
-              {...register("fullName", { required: true })}
-              autoComplete="nope"
-              name="fullName"
-              className="px-4 py-3 bg-[#F2F7FF] text-primary w-full focus:border focus:outline-none focus:border-primary rounded-md"
-              type="text"
-              placeholder="Full Name"
-            />
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 justify-between">
+              <input
+                {...register("firstName", { required: true })}
+                autoComplete="nope"
+                name="firstName"
+                className="px-4 py-3 bg-[#F2F7FF] text-primary md:w-[300px] focus:border focus:outline-none focus:border-primary rounded-md"
+                type="text"
+                placeholder="First Name"
+              />
+              <input
+                {...register("lastName", { required: true })}
+                className="px-4 py-3 bg-[#F2F7FF] text-primary md:w-[300px] focus:border focus:outline-none focus:border-primary rounded-md"
+                type="text"
+                placeholder="Last Name"
+              />
+            </div>
           </div>
           <div className="flex flex-col space-y-[6px]">
             <p>Contact*</p>
-            <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+            <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
               <input
                 {...register("email", {
                   required: true,
@@ -108,12 +120,12 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
                 })}
                 autoComplete="nope"
                 name="email"
-                className="px-4 py-3 bg-[#F2F7FF] text-primary w-full focus:border focus:outline-none focus:border-primary rounded-md"
+                className="px-4 py-3 bg-[#F2F7FF] text-primary md:w-[300px] focus:border focus:outline-none focus:border-primary rounded-md"
                 type="text"
                 placeholder="Email Address"
               />
               <PhoneInputWithCountrySelect
-                className="space-x-2 text-primary h-full focus:border focus:outline-none focus:border-primary"
+                className="space-x-2 text-primary h-full  focus:border focus:outline-none focus:border-primary"
                 {...register("phoneNumber", {
                   required: true,
                   minLength: 7,
@@ -127,7 +139,17 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
               />
             </div>
           </div>
-
+          <div className="flex flex-col space-y-[6px]">
+            <p>What is your Home Address?*</p>
+            <input
+              {...register("homeAddress", { required: true })}
+              autoComplete="nope"
+              name="homeAddress"
+              className="px-4 py-3 bg-[#F2F7FF] text-primary w-full focus:border focus:outline-none focus:border-primary rounded-md"
+              type="text"
+              placeholder="What is your Home Address?"
+            />
+          </div>
           <div className="flex flex-col space-y-[6px]">
             <p>Gender*</p>
             <div className="flex items-center space-x-4">
@@ -166,6 +188,7 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
               placeholder="Full Name of the person that reffered you"
             />
           </div>
+
           <div className="flex justify-center w-full">
             <button
               className="bg-secondary text-white text-sm px-[18px] py-3 font-bold w-fit rounded-xl hover:scale-105 transition-transform duration-200 ease-in-out flex items-center space-x-1 disabled:bg-tertiary disabled:text-secondary"
