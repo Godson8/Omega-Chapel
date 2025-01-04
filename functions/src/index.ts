@@ -1,6 +1,6 @@
 // const functions = require("firebase-functions");
-import * as functions from "firebase-functions";
-import admin from "firebase-admin";
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
 import nodemailer from "nodemailer";
 import { google } from "googleapis";
 const path = require("path");
@@ -203,7 +203,7 @@ export const syncCollectionPartners = functions.firestore.onDocumentWritten(
 // UPDATE THE PARTNERS DB
 
 exports.updateFirestoreCollections = functions.https.onRequest(
-  async (req, res) => {
+  async (req: any, res: any) => {
     try {
       const collectionsToUpdate = ["Partners"]; // Specify the collection name
 
@@ -257,7 +257,7 @@ exports.updateFirestoreCollections = functions.https.onRequest(
 // Firestore trigger for new partnership registration
 export const sendRegistrationEmail = functions.firestore.onDocumentCreated(
   "Partners/{docId}",
-  async (event) => {
+  async (event: any) => {
     const snap = event.data;
     // Ensure snap is valid and data is available
     if (!snap) {
