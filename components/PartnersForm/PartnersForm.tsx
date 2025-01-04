@@ -18,6 +18,7 @@ interface FormValues {
   gender: string;
   email: string;
   homeAddress: string;
+  partnershipFrequency: string;
   whoReferredYou: string;
 }
 
@@ -65,6 +66,7 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
       "Phone Number": data.phoneNumber,
       Gender: data.gender,
       "Home Address": data.homeAddress,
+      "Partnership Frequency": data.partnershipFrequency,
       "Who referred you": data.whoReferredYou,
       date: dateFormat(new Date()),
     })
@@ -149,6 +151,18 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
               type="text"
               placeholder="What is your Home Address?"
             />
+          </div>
+          <div className="flex flex-col space-y-[6px]">
+            <p>What is the frequency of the partnership cycle?*</p>
+            <select
+              {...register("partnershipFrequency", { required: true })}
+              className="px-4 py-3 bg-[#F2F7FF] text-primary w-full focus:border focus:outline-none focus:border-primary rounded-md"
+            >
+              <option value="Biweekly">Biweekly</option>
+              <option value="Monthly">Monthly</option>
+              <option value="Quarterly">Quarterly</option>
+              <option value="Annually">Annually</option>
+            </select>
           </div>
           <div className="flex flex-col space-y-[6px]">
             <p>Gender*</p>
