@@ -1,8 +1,8 @@
 // const functions = require("firebase-functions");
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
-import nodemailer from "nodemailer";
-import { google } from "googleapis";
+const nodemailer = require("nodemailer");
+const { google } = require("googleapis");
 const path = require("path");
 
 admin.initializeApp();
