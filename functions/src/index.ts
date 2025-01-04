@@ -35,12 +35,13 @@ const sheets = google.sheets({ version: "v4", auth });
 const SPREADSHEET_ID = "1Q5Vs3z9XQI08pykhcjKj28SsVtMcJLIs556CePeENds";
 
 // JOIN US THIS SUNDAY FORM
-export const syncCollection1 = functions.firestore.onDocumentWritten(
-  "Join us this Sunday/{docId}",
-  async (event: any) => {
-    const afterSnap = event.data?.after;
+export const syncCollection1 = functions
+  .runWith({ memory: "2GB", timeoutSeconds: 540 }) // Configure memory and timeout
+  .firestore.document("Join us this Sunday/{docId}")
+  .onWrite(async (change: any, context: any) => {
+    const afterSnap = change.after;
 
-    if (!afterSnap) {
+    if (!afterSnap.exists) {
       console.error("No data found in the 'after' snapshot.");
       return;
     }
@@ -52,7 +53,7 @@ export const syncCollection1 = functions.firestore.onDocumentWritten(
       return;
     }
 
-    const docId = event.params.docId;
+    const docId = context.params.docId;
 
     // Append to "Join us this Sunday" sheet
     const values = [
@@ -81,7 +82,7 @@ export const syncCollection1 = functions.firestore.onDocumentWritten(
       // Send email notification
       const mailOptions = {
         from: "omegachapel6@gmail.com",
-        to: ["godsonoladipupo@yahoo.com", ""], // Add multiple recipients if needed
+        to: ["godsonoladipupo6@gmail.com"], // Add multiple recipients if needed
         subject: "New 'Join Us This Sunday' Form Submission",
         html: `
           <p><b>New form submission received: Join Us this Sunday</b></p>
@@ -92,7 +93,7 @@ export const syncCollection1 = functions.firestore.onDocumentWritten(
           <p><b>First Timer:</b> ${formData["First Timer"]}</p>
           <p><b>Message:</b> ${formData.Message}</p>
           <p><b>Submitted On:</b> ${formData.date}</p>
-          <p><b>Spreadsheet Link</b><a href = "https://docs.google.com/spreadsheets/d/1Q5Vs3z9XQI08pykhcjKj28SsVtMcJLIs556CePeENds/edit?gid=0#gid=0" target="_blank">View Responses</a></p>
+          <p><b>Spreadsheet Link</b><a href="https://docs.google.com/spreadsheets/d/1Q5Vs3z9XQI08pykhcjKj28SsVtMcJLIs556CePeENds/edit?gid=0#gid=0" target="_blank">View Responses</a></p>
         `,
       };
 
@@ -104,8 +105,7 @@ export const syncCollection1 = functions.firestore.onDocumentWritten(
         error
       );
     }
-  }
-);
+  });
 
 // PARTNERS FORM
 
@@ -125,12 +125,13 @@ function getValue(
   return formData[key] || defaultValue;
 }
 
-export const syncCollectionPartners = functions.firestore.onDocumentWritten(
-  "Partners/{docId}",
-  async (event: any) => {
-    const afterSnap = event.data?.after;
+export const syncCollectionPartners = functions
+  .runWith({ memory: "2GB", timeoutSeconds: 540 }) // Configure memory and timeout
+  .firestore.document("Partners/{docId}")
+  .onWrite(async (change: any, context: any) => {
+    const afterSnap = change.after;
 
-    if (!afterSnap) {
+    if (!afterSnap.exists) {
       console.error("No data found in the 'after' snapshot.");
       return;
     }
@@ -141,7 +142,7 @@ export const syncCollectionPartners = functions.firestore.onDocumentWritten(
       return;
     }
 
-    const docId = event.params.docId;
+    const docId = context.params.docId;
     const values = [
       [
         getValue(formData, "First Name"),
@@ -168,7 +169,14 @@ export const syncCollectionPartners = functions.firestore.onDocumentWritten(
 
       const mailOptions = {
         from: "omegachapel6@gmail.com",
-        to: ["godsonoladipupo6@gmail.com"],
+        to: [
+          "godsonoladipupo6@gmail.com",
+          "piusoladipupo@yahoo.com",
+          "funkeoladipupo@yahoo.com",
+          "oladipupodavid18@gmail.com",
+          "kemisolajesu03@yahoo.com",
+          "olubodunlizzy@gmail.com",
+        ],
         subject: "New 'Partners' Form Submission",
         html: `
           <p><b>New Partnership Form Submission:</b></p>
@@ -178,7 +186,7 @@ export const syncCollectionPartners = functions.firestore.onDocumentWritten(
           <p><b>Phone Number:</b> ${getValue(formData, "Phone Number")}</p>
           <p><b>Gender:</b> ${getValue(formData, "Gender")}</p>
           <p><b>Home Address:</b> ${getValue(formData, "Home Address")}</p>
-          <p><b>Home Address:</b> ${getValue(formData, "Partnership Frequency")}</p>
+          <p><b>Partnership Frequency:</b> ${getValue(formData, "Partnership Frequency")}</p>
           <p><b>Who referred you?</b> ${getValue(formData, "Who referred you")}</p>
           <p><b>Submitted On:</b> ${getValue(formData, "date", new Date().toISOString())}</p>
           <p><b>Spreadsheet Link:</b> 
@@ -197,8 +205,7 @@ export const syncCollectionPartners = functions.firestore.onDocumentWritten(
         error
       );
     }
-  }
-);
+  });
 
 // UPDATE THE PARTNERS DB
 
@@ -255,16 +262,10 @@ exports.updateFirestoreCollections = functions.https.onRequest(
 );
 
 // Firestore trigger for new partnership registration
-export const sendRegistrationEmail = functions.firestore.onDocumentCreated(
-  "Partners/{docId}",
-  async (event: any) => {
-    const snap = event.data;
-    // Ensure snap is valid and data is available
-    if (!snap) {
-      console.error("No document found in the snapshot.");
-      return;
-    }
-
+export const sendRegistrationEmail = functions
+  .runWith({ memory: "2GB", timeoutSeconds: 540 }) // Configure memory and timeout
+  .firestore.document("Partners/{docId}")
+  .onCreate(async (snap: any, context: any) => {
     const data = snap.data(); // This should be available for onCreate
     if (!data) {
       console.error("No data found in the new document.");
@@ -452,7 +453,7 @@ a[x-apple-data-detectors],
                   <td align="left" style="padding:0;Margin:0;width:560px">
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr>
-                      <td align="center" class="es-text-4774" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;letter-spacing:0;color:#333333;font-size:14px"><em class="es-text-mobile-size-11" style="font-size:11px">Copyright (C) 2025 POMI. All rights reserved.</em></p></td>
+                      <td align="center" class="es-text-4774" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;letter-spacing:0;color:#333333;font-size:14px"><em class="es-text-mobile-size-11" style="font-size:11px">Copyright (C) ${new Date().getFullYear()} POMI. All rights reserved.</em></p></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -475,8 +476,7 @@ a[x-apple-data-detectors],
     } catch (error) {
       console.error("Error sending email to", email, ":", error);
     }
-  }
-);
+  });
 
 // "godsonoladipupo@yahoo.com",
 // "godsonoladipupo6@gmail.com",

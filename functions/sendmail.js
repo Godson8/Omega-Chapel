@@ -5,7 +5,7 @@
 //   service: "gmail",
 //   auth: {
 //     user: "pomipartners@gmail.com", // Replace with your email
-//     pass: "zaaw puhn bdgs zhyu", // Replace with your email password
+//     pass: "", // Replace with your email password
 //   },
 // });
 

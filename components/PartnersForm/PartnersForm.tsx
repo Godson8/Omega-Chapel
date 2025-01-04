@@ -1,6 +1,6 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { database } from "../../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import Snackbar from "@mui/material/Snackbar";
@@ -10,6 +10,7 @@ import { Oval } from "react-loader-spinner";
 import Button from "../Button/Button";
 import { AlertTitle } from "@mui/material";
 import dateFormat from "dateformat";
+import { isValidPhoneNumber } from "libphonenumber-js";
 
 interface FormValues {
   firstName: string;
@@ -43,7 +44,19 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
     setValue(value), { ...register("phoneNumber") };
   };
 
-  const { register, handleSubmit, formState, reset } = useForm<FormValues>();
+  const { control, register, handleSubmit, formState, reset, setFocus } =
+    useForm<FormValues>({
+      defaultValues: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "", // Ensure phone number is initially empty or properly set
+        gender: "",
+        homeAddress: "",
+        partnershipFrequency: "Biweekly",
+        whoReferredYou: "",
+      },
+    });
   const { isSubmitting } = formState;
 
   const handleClose = (
@@ -57,25 +70,35 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
     setOpen(false);
   };
 
-  const onSubmit = (data: any) => {
-    reset();
-    addDoc(databaseRef, {
-      "First Name": data.firstName,
-      "Last Name": data.lastName,
-      Email: data.email,
-      "Phone Number": data.phoneNumber,
-      Gender: data.gender,
-      "Home Address": data.homeAddress,
-      "Partnership Frequency": data.partnershipFrequency,
-      "Who referred you": data.whoReferredYou,
-      date: dateFormat(new Date()),
-    })
-      .then(() => {
-        setOpen(true);
-      })
-      .catch(() => {
-        setErrorOpen(true);
+  const onSubmit = async (data: any) => {
+    const phoneNumber = data.phoneNumber;
+
+    // Validate the phone number
+    if (!isValidPhoneNumber(phoneNumber)) {
+      console.error("Invalid phone number");
+
+      // Focus on the phone number field if it's invalid
+      setFocus("phoneNumber");
+
+      return; // You can display an error message here if the phone number is invalid
+    }
+    try {
+      await addDoc(databaseRef, {
+        "First Name": data.firstName,
+        "Last Name": data.lastName,
+        Email: data.email,
+        "Phone Number": data.phoneNumber,
+        Gender: data.gender,
+        "Home Address": data.homeAddress,
+        "Partnership Frequency": data.partnershipFrequency,
+        "Who referred you": data.whoReferredYou,
+        date: dateFormat(new Date()),
       });
+      setOpen(true); // Show success message
+      reset();
+    } catch (error) {
+      setErrorOpen(true); // Show error message
+    }
   };
 
   return (
@@ -126,18 +149,26 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
                 type="text"
                 placeholder="Email Address"
               />
-              <PhoneInputWithCountrySelect
-                className="space-x-2 text-primary h-full  focus:border focus:outline-none focus:border-primary"
-                {...register("phoneNumber", {
-                  required: true,
-                  minLength: 7,
-                })}
-                autoComplete="nope"
-                value={value}
-                international
-                defaultCountry="NG"
-                onChange={phoneNumberChange}
-                placeholder="Phone number"
+              <Controller
+                name="phoneNumber"
+                control={control}
+                defaultValue=""
+                rules={{
+                  required: "Phone number is required",
+                  validate: (value) =>
+                    isValidPhoneNumber(value) || "Invalid phone number", // Custom validation rule
+                }}
+                render={({ field }) => (
+                  <PhoneInputWithCountrySelect
+                    className="space-x-2 text-primary h-full  focus:border focus:outline-none focus:border-primary"
+                    {...field} // Spread the field props from react-hook-form
+                    international
+                    defaultCountry="NG"
+                    onChange={(value) => field.onChange(value)} // Update the field value with onChange
+                    // value={field.value}
+                    placeholder="Phone number"
+                  />
+                )}
               />
             </div>
           </div>
