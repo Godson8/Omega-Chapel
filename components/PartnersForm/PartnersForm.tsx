@@ -184,7 +184,7 @@ const PartnersForm = ({ title, detail }: FormTitle) => {
             />
           </div>
           <div className="flex flex-col space-y-[6px]">
-            <p>What is the frequency of the partnership cycle?*</p>
+            <p>What is your preferred partnership cycle?*</p>
             <select
               {...register("partnershipFrequency", { required: true })}
               className="px-4 py-3 bg-[#F2F7FF] text-primary w-full focus:border focus:outline-none focus:border-primary rounded-md"
