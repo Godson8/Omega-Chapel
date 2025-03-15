@@ -318,50 +318,6 @@ const Partners = () => {
             </ol>
           </div>
         </div>
-        {/* Executive board */}
-        {/* <div className="mt-14 space-y-10">
-        <h1 className="md:text-6xl text-4xl font-bold font-primary">
-          Meet our Executive board
-        </h1>
-        {/* <Tabs /> 
-      </div> */}
-        {/* <div>
-        <h1 className="md:text-3xl text-2xl font-bold font-primary">
-          What we do (in pictures)
-        </h1>
-        <div>
-          <div>
-            <h1 className="md:text-3xl text-2xl font-primary">
-              Salvation of Souls
-            </h1>
-          </div>
-          <div>
-            <h1 className="md:text-3xl text-2xl font-primary">
-              Charity and family support Sunday
-            </h1>
-          </div>
-          <div>
-            <h1 className="md:text-3xl text-2xl font-primary">
-              Medical outreach
-            </h1>
-          </div>
-          <div>
-            <h1 className="md:text-3xl text-2xl font-primary">
-              Community impact by primary education
-            </h1>
-          </div>
-          <div>
-            <h1 className="md:text-3xl text-2xl font-primary">
-              Music outreach
-            </h1>
-          </div>
-          <div>
-            <h1 className="md:text-3xl text-2xl font-primary">
-              Campus outreach
-            </h1>
-          </div>
-        </div>
-      </div> */}
         <WhatWeDo />
         <PartnersForm
           title="Want to be a Partner?"
@@ -381,17 +337,22 @@ const Partners = () => {
             the Kingdom of God is glorified. Your partnership helps us continue
             this impactful mission.
           </p>
-          {/* <div className="flex justify-center mt-8">
-          <button
-            onClick={() => setModalOpen(true)}
-            className="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-blue-600"
-          >
-            Give Now
-          </button>
-        </div> */}
+
           <div ref={giveSectionRef}>
             <PartnersGive />
           </div>
+        </div>
+        <div className="mt-16 text-center">
+          <h2 className="text-xl font-bold">Contact Us</h2>
+          <p className="text-gray-600">
+            Email us at{" "}
+            <a
+              href="mailto:pomipartners@gmail.com"
+              className="text-blue-600 hover:underline"
+            >
+              pomipartners@gmail.com
+            </a>
+          </p>
         </div>
       </div>
     </>

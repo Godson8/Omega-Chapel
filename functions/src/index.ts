@@ -176,6 +176,7 @@ export const syncCollectionPartners = functions
           "oladipupodavid18@gmail.com",
           "kemisolajesu03@yahoo.com",
           "olubodunlizzy@gmail.com",
+          "ebun.oriretan@gmail.com",
         ],
         subject: "New 'Partners' Form Submission",
         html: `
