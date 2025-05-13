@@ -240,6 +240,49 @@ const PartnersGive = () => {
                       id="panel1-header"
                     >
                       <Typography className="font-bold">
+                        USD Account (USD)
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography className="space-y-2 text-primary">
+                        <p>
+                          <span className="font-bold">Bank: </span>Wells Fargo
+                        </p>
+                        <p>
+                          <span className="font-bold">Account Number: </span>
+                          2640492076
+                        </p>
+                        <p>
+                          <span className="font-bold">
+                            Direct Deposit & Electronic Payments:{" "}
+                          </span>
+                          021200025
+                        </p>
+                        <p>
+                          <span className="font-bold">
+                            Domestic Wire Transfers:{" "}
+                          </span>
+                          121000248
+                        </p>
+                        <p>
+                          <span className="font-bold">
+                            International Wire Trasfers:{" "}
+                          </span>
+                          WFBIUS6S
+                        </p>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion
+                    expanded={expanded === "panel2"}
+                    onChange={handleAccordionChange("panel2")}
+                  >
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel2-content"
+                      id="panel2-header"
+                    >
+                      <Typography className="font-bold">
                         Naira Account (NGN)
                       </Typography>
                     </AccordionSummary>
@@ -257,16 +300,16 @@ const PartnersGive = () => {
                   </Accordion>
 
                   <Accordion
-                    expanded={expanded === "panel2"}
-                    onChange={handleAccordionChange("panel2")}
+                    expanded={expanded === "panel3"}
+                    onChange={handleAccordionChange("panel3")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel2-content"
-                      id="panel2-header"
+                      aria-controls="panel3-content"
+                      id="panel3-header"
                     >
                       <Typography className="font-bold">
-                        Dollar Account (USD)
+                        Nigerian Dollar Account (USD)
                       </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -291,13 +334,13 @@ const PartnersGive = () => {
                   </Accordion>
 
                   <Accordion
-                    expanded={expanded === "panel3"}
-                    onChange={handleAccordionChange("panel3")}
+                    expanded={expanded === "panel4"}
+                    onChange={handleAccordionChange("panel4")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel3-content"
-                      id="panel3-header"
+                      aria-controls="panel4-content"
+                      id="panel4-header"
                     >
                       <Typography className="font-bold">
                         Pound Account (GBP)
@@ -325,13 +368,13 @@ const PartnersGive = () => {
                   </Accordion>
 
                   <Accordion
-                    expanded={expanded === "panel4"}
-                    onChange={handleAccordionChange("panel4")}
+                    expanded={expanded === "panel5"}
+                    onChange={handleAccordionChange("panel5")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel4-content"
-                      id="panel4-header"
+                      aria-controls="panel5-content"
+                      id="panel5-header"
                     >
                       <Typography className="font-bold">
                         Euro Account (EUR)
