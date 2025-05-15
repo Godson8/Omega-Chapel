@@ -309,7 +309,7 @@ const PartnersGive = () => {
                       id="panel3-header"
                     >
                       <Typography className="font-bold">
-                        Nigerian Dollar Account (USD)
+                        Nigerian Dollar Account
                       </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
