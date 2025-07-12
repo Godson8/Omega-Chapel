@@ -270,6 +270,10 @@ const PartnersGive = () => {
                           </span>
                           WFBIUS6S
                         </p>
+                        <p>
+                          <span className="font-bold">Zelle: </span>
+                          pomipartners@gmail.com
+                        </p>
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
