@@ -487,7 +487,7 @@ const PartnersGive = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography className="space-y-2 text-primary">
-                        <p className="font-bold">piusoladipupo@yahoo.com</p>
+                        <p className="font-bold">5513393978</p>
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
