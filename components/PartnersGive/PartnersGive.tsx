@@ -108,8 +108,14 @@ const PartnersGive = () => {
                 />
                 <Tab
                   icon={<FaMoneyBillAlt size={24} />} // Increase icon size
-                  label="Others"
+                  label="Zelle"
                   value="2"
+                  className="flex items-center space-x-2" // Align text and icon
+                />
+                <Tab
+                  icon={<FaMoneyBillAlt size={24} />} // Increase icon size
+                  label="Others"
+                  value="3"
                   className="flex items-center space-x-2" // Align text and icon
                 />
               </TabList>
@@ -231,13 +237,34 @@ const PartnersGive = () => {
               <TabPanel value="2">
                 <div className="mt-8 space-y-4">
                   <Accordion
-                    expanded={expanded === "panel1"}
-                    onChange={handleAccordionChange("panel1")}
+                    expanded={expanded === "panel2"}
+                    onChange={handleAccordionChange("panel2")}
+                  >
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel2-content"
+                      id="panel2-header"
+                    >
+                      <Typography className="font-bold">ZELLE</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography className="space-y-2 text-primary">
+                        <p className="font-bold">pomipartners@gmail.com</p>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                </div>
+              </TabPanel>
+              <TabPanel value="3">
+                <div className="mt-8 space-y-4">
+                  <Accordion
+                    expanded={expanded === "panel3"}
+                    onChange={handleAccordionChange("panel3")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
                       aria-controls="panel1-content"
-                      id="panel1-header"
+                      id="panel3-header"
                     >
                       <Typography className="font-bold">
                         USD Account (USD)
@@ -254,37 +281,34 @@ const PartnersGive = () => {
                         </p>
                         <p>
                           <span className="font-bold">
-                            Direct Deposit & Electronic Payments:{" "}
+                            Routing Number for Direct Deposit & Electronic
+                            Payments:{" "}
                           </span>
                           021200025
                         </p>
                         <p>
                           <span className="font-bold">
-                            Domestic Wire Transfers:{" "}
+                            Routing Number for Domestic Wire Transfers:{" "}
                           </span>
                           121000248
                         </p>
                         <p>
                           <span className="font-bold">
-                            International Wire Trasfers:{" "}
+                            Routing Number for International Wire Trasfers:{" "}
                           </span>
                           WFBIUS6S
-                        </p>
-                        <p>
-                          <span className="font-bold">Zelle: </span>
-                          pomipartners@gmail.com
                         </p>
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
                   <Accordion
-                    expanded={expanded === "panel2"}
-                    onChange={handleAccordionChange("panel2")}
+                    expanded={expanded === "panel4"}
+                    onChange={handleAccordionChange("panel4")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel2-content"
-                      id="panel2-header"
+                      aria-controls="panel4-content"
+                      id="panel4-header"
                     >
                       <Typography className="font-bold">
                         Naira Account (NGN)
@@ -304,12 +328,12 @@ const PartnersGive = () => {
                   </Accordion>
 
                   <Accordion
-                    expanded={expanded === "panel3"}
-                    onChange={handleAccordionChange("panel3")}
+                    expanded={expanded === "panel5"}
+                    onChange={handleAccordionChange("panel5")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel3-content"
+                      aria-controls="panel5-content"
                       id="panel3-header"
                     >
                       <Typography className="font-bold">
@@ -338,13 +362,13 @@ const PartnersGive = () => {
                   </Accordion>
 
                   <Accordion
-                    expanded={expanded === "panel4"}
-                    onChange={handleAccordionChange("panel4")}
+                    expanded={expanded === "panel6"}
+                    onChange={handleAccordionChange("panel6")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel4-content"
-                      id="panel4-header"
+                      aria-controls="panel6-content"
+                      id="panel6-header"
                     >
                       <Typography className="font-bold">
                         Pound Account (GBP)
@@ -372,13 +396,13 @@ const PartnersGive = () => {
                   </Accordion>
 
                   <Accordion
-                    expanded={expanded === "panel5"}
-                    onChange={handleAccordionChange("panel5")}
+                    expanded={expanded === "panel7"}
+                    onChange={handleAccordionChange("panel7")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel5-content"
-                      id="panel5-header"
+                      aria-controls="panel7-content"
+                      id="panel7-header"
                     >
                       <Typography className="font-bold">
                         Euro Account (EUR)
@@ -425,8 +449,14 @@ const PartnersGive = () => {
                 />
                 <Tab
                   icon={<FaMoneyBillAlt size={24} />} // Increase icon size
-                  label="Others"
+                  label="Zelle"
                   value="2"
+                  className="flex items-center space-x-2" // Align text and icon
+                />
+                <Tab
+                  icon={<FaMoneyBillAlt size={24} />} // Increase icon size
+                  label="Others"
+                  value="3"
                   className="flex items-center space-x-2" // Align text and icon
                 />
               </TabList>
@@ -445,13 +475,78 @@ const PartnersGive = () => {
               <TabPanel value="2">
                 <div className="mt-8 space-y-4">
                   <Accordion
-                    expanded={expanded === "panel4"}
-                    onChange={handleAccordionChange("panel4")}
+                    expanded={expanded === "panel8"}
+                    onChange={handleAccordionChange("panel8")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel5-content"
-                      id="panel5-header"
+                      aria-controls="panel2-content"
+                      id="panel8-header"
+                    >
+                      <Typography className="font-bold">ZELLE</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography className="space-y-2 text-primary">
+                        <p className="font-bold">piusoladipupo@yahoo.com</p>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                </div>
+              </TabPanel>
+              <TabPanel value="3">
+                <div className="mt-8 space-y-4">
+                  <Accordion
+                    expanded={expanded === "panel9"}
+                    onChange={handleAccordionChange("panel9")}
+                  >
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel9-content"
+                      id="panel9-header"
+                    >
+                      <Typography className="font-bold">
+                        USD Account (USD)
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography className="space-y-2 text-primary">
+                        <p>
+                          <span className="font-bold">Bank: </span>Wells Fargo
+                        </p>
+                        <p>
+                          <span className="font-bold">Account Number: </span>
+                          7433916272
+                        </p>
+                        <p>
+                          <span className="font-bold">
+                            Routing Number for Direct Deposit & Electronic
+                            Payments:{" "}
+                          </span>
+                          021200025
+                        </p>
+                        <p>
+                          <span className="font-bold">
+                            Routing Number for Domestic Wire Transfers:{" "}
+                          </span>
+                          121000248
+                        </p>
+                        <p>
+                          <span className="font-bold">
+                            Routing Number for International Wire Trasfers:{" "}
+                          </span>
+                          WFBIUS6S
+                        </p>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion
+                    expanded={expanded === "panel10"}
+                    onChange={handleAccordionChange("panel10")}
+                  >
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel10-content"
+                      id="panel10-header"
                     >
                       <Typography className="font-bold">
                         Naira Account
@@ -471,16 +566,16 @@ const PartnersGive = () => {
                   </Accordion>
 
                   <Accordion
-                    expanded={expanded === "panel5"}
-                    onChange={handleAccordionChange("panel5")}
+                    expanded={expanded === "panel11"}
+                    onChange={handleAccordionChange("panel11")}
                   >
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1-content"
-                      id="panel1-header"
+                      aria-controls="panel11-content"
+                      id="panel11-header"
                     >
                       <Typography className="font-bold">
-                        Dollar Account (USD)
+                        Nigerian Dollar Account (USD)
                       </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
